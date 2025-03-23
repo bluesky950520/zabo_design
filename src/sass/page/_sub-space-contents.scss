@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.sub-space-contents__inner {
+    max-width: rem(1250);
+    width: 100%;
+
+    @include mq("md") {
+        max-width: rem(640);
+    }
+}

@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.sidebar__category {
+    margin-top: rem(40);
+}
+
+.sidebar-category__inner {
+    padding: 0 rem(18);
+
+    @include mq("md") {
+        padding: 0;
+    }
+}
+
+.sidebar-category__list {
+    @include mq("md") {
+        width: 89.566%;
+        margin: 0 auto;
+    }
+}
+
+
+

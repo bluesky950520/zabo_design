@@ -1,0 +1,215 @@
+@use "global" as *;
+
+.flow-cards {
+    position: relative;
+}
+
+.flow-cards__wrapper {
+    position: relative;
+    margin-right: calc(50% - 50vw);
+    margin-top: rem(14);
+
+    @include mq("md") {
+        margin: 0;
+    }
+}
+
+.flow-cards__buttons {
+    position: absolute;
+    top: -3%;
+    right: 9%; // 右端に配置（適宜調整）
+    // transform: translateY(-50%);
+    display: flex;
+    // flex-direction: column; // 縦並びに配置
+    gap: rem(10); // ボタン間のスペース調整
+    z-index: 10;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    // width: rem(50); // ボタンの見た目のサイズ
+    // height: rem(50);
+    // padding: rem(5); // クリック領域を5px拡張
+    @include mq("md") {
+        display: none;
+    }
+}
+
+// .swiper-button-next::after,
+// .swiper-button-prev::after {
+
+//         position: absolute;
+//         content: "";
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         width: rem(42);
+//         height: rem(8);
+//         mask-image: url(./images/common/flow-left-arrow.svg);
+//         mask-repeat: no-repeat;
+//         mask-position: center center;
+//         mask-size: contain;
+//         @include mq("md") {
+
+//         }
+// }
+
+.swiper-button-next::after {
+    content: "";
+    display: block;
+    width: rem(27);
+    height: rem(27);
+    background-image: url(../images/common/flow-left-arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    // transform: scaleX(-1); // 右矢印に反転
+}
+
+.swiper-button-prev {
+    right: rem(40);
+}
+
+.swiper-button-prev::after {
+    content: "";
+    display: block;
+    width: rem(27);
+    height: rem(27);
+    background-image: url(../images/common/flow-right-arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// .flow__cards {
+//     @include mq("md") {
+//         display: flex;
+//         flex-wrap: wrap;
+//         gap: rem(40); // ★ 各カードの間隔を40px開ける
+//         justify-content: center;
+//     }
+// }
+
+.flow-cards__swiper.swiper {
+    padding-top: rem(27);
+    padding-bottom: rem(10);
+
+    // opacity: 0;
+    @include mq("md") {
+        padding: 0;
+    }
+}
+
+.flow-cards__swiper .swiper-wrapper {
+    @include mq("md") {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // gap: rem(25);
+        /* 40pxの隙間を確保 */
+        gap: rem(40); /* カード間の間隔を確保 */
+    }
+}
+
+.flow-cards .swiper.swiper-initialized {
+    opacity: 1;
+}
+
+.flow-cards__item.swiper-slide {
+    position: relative;
+    max-width: rem(181);
+    width: 100%;
+    height: auto;
+
+    // @include mq("md") {
+    //     max-width: rem(181);
+    // }
+
+    // box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.flow-cards__item {
+    position: relative;
+
+    @include mq("md") {
+        flex: 1 1 calc((100% - (rem(40) * 4)) / 5);
+        /* 5等分＋間隔考慮 */
+        max-width: calc((100% - (rem(40) * 4)) / 5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    // @include mq("md") {
+    //     flex: 1 1 calc((100% - (rem(50) * 4)) / 5); /* 5枚並ぶように計算 */
+    //     max-width: calc((100% - (rem(50) * 4)) / 5);
+    // }
+}
+
+.flow-cards__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 画像サイズ調整 */
+.swiper-slide img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+// .flow-cards__arrow {
+//     position: absolute;
+//     top: 25%;
+//     left: 108%;
+//     transform: translate(-50%, -50%);
+//     font-size: rem(24);
+//     font-weight: bold;
+//     color: #333;
+//     width: rem(20);
+//     height: auto;
+//     z-index: 10;
+//     // display: flex;
+//     // align-items: center; /* 上下中央 */
+//     // justify-content: center; /* 左右中央 */
+//     // font-size: rem(24); /* 矢印のサイズ */
+//     // font-weight: bold;
+//     // color: #333; /* 矢印の色 */
+//     // height: rem(121); /* カード画像の高さに合わせる */
+// }
+
+.flow-cards__arrow {
+    position: absolute;
+    width: rem(25);
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // position: relative;
+    // width: rem(30); /* 矢印の幅 */
+    // height: auto;
+    // margin: 0 rem(10); /* カード間の余白 */
+    top: 19%;
+    left: calc(100% + rem(12));
+    // left: 106.5%;
+
+    @include mq("md") {
+        width: rem(22.5);
+        top: 19%;
+        // left: 106.5%;
+        left: calc(100% + rem(12.8));
+    }
+}
+
+.flow-cards__arrow img {
+    width: 100%;
+    height: auto;
+}

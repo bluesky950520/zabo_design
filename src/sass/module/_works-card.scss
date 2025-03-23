@@ -1,0 +1,137 @@
+@use "global" as *;
+
+.works-card {
+    position: relative;
+}
+
+.works-card__content {
+    @include mq("md") {
+        display: flex;
+        gap: 4.74%;
+        align-items: flex-end;
+        // flex-direction: row-reverse;
+        margin-top: rem(33);
+    }
+}
+
+.works-cards__item:nth-child(2) .works-card__content {
+    @include mq("md") {
+        flex-direction: row-reverse;
+
+    }
+}
+
+.works-cards__item:nth-child(2) .works-card__img1 {
+    top: 6%;
+    left: 9%;
+    @include mq("md") {
+        top: 2%;
+    }
+}
+
+
+.works-card__img1 {
+    display: block;
+    max-width: rem(225);
+    max-height: rem(235);
+    margin-top: rem(60);
+    // aspect-ratio: 235/225;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+    @include mq("md") {
+        position: absolute;
+        top: 6%;
+        left: 59%;
+        max-width: rem(367);
+        max-height: rem(236);
+        margin-top: 0;
+
+    }
+}
+
+.works-card__img1.is-animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.works-card__img1.is-animated {
+    opacity: 1;
+    animation: poyoyonImage 1s ease-in-out forwards;
+}
+
+@keyframes poyoyonImage {
+    0% {
+        transform: scale(1.0, 1.0) translateY(-20px);
+        opacity: 0;
+    }
+
+    15% {
+        transform: scale(0.98, 0.9) translateY(5px);
+        opacity: 1;
+    }
+
+    30% {
+        transform: scale(1.02, 1.0) translateY(8px);
+    }
+
+    50% {
+        transform: scale(0.98, 1.05) translateY(-8px);
+    }
+
+    70% {
+        transform: scale(1.0, 0.9) translateY(5px);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0) translateY(0);
+    }
+}
+
+.works-card__img1 img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+.works-card__img2 {
+    aspect-ratio: 335/219;
+    overflow: hidden;
+
+    @include mq("md") {
+        aspect-ratio: 538/343;
+        width: 48.72%;
+    }
+}
+
+.works-card__img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: rem(5);
+}
+
+.works-card__body {
+    margin-top: rem(16);
+    padding-bottom: rem(60);
+
+    @include mq("md") {
+        width: 46.54%;
+        padding-bottom: 0;
+    }
+}
+
+.works-card__text {
+    font-size: rem(16);
+    font-weight: $semibold;
+    letter-spacing: 0.1em;
+
+    @include mq("md") {
+        line-height: 1.8;
+
+    }
+}

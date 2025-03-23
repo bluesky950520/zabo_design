@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.ability {
+    background-color: $blue3;
+    background-image: url('../images/common/ability-bg.svg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.ability__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(260);
+
+    // @include mq("md2") {
+    //     padding-top: rem(100);
+    //     padding-bottom: rem(127);
+    //     max-width: rem(600);
+    // }
+
+    @include mq("md") {
+        max-width: rem(912);
+        width: 100%;
+    }
+}
+
+.ability__title {
+    text-align: center;
+}
+
+.ability__cards {
+    margin-top: rem(19);
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}

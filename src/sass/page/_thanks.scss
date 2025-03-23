@@ -1,0 +1,113 @@
+@use "global" as *;
+
+.thanks__inner {
+    max-width: rem(690);
+    width: 100%;
+
+    @include mq("md") {
+        max-width: rem(600);
+    }
+}
+
+.thanks__message-eng {
+    font-size: rem(40);
+    font-weight: $bold;
+    font-family: $second-font-family;
+    text-transform: capitalize;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    @include mq("md") {
+        font-size: rem(24);
+
+    }
+    @include mq1("sm") {
+        font-size: rem(18);
+
+    }
+}
+
+.thanks__message-jp {
+    font-size: rem(18);
+    font-weight: $medium;
+    text-align: center;
+    margin-top: rem(18);
+
+    @include mq("md") {
+        font-size: rem(14);
+        margin-top: rem(10);
+
+    }
+}
+
+.thanks__text {
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: lh(38, 16);
+    margin-top: rem(40);
+
+    @include mq("md") {
+        font-size: rem(14);
+        line-height: lh(32, 14);
+        margin-top: rem(29);
+    }
+}
+
+.thanks__btn {
+    margin-top: rem(60);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.thanks__btn-link {
+    display: inline-block;
+    max-width: rem(400);
+    width: 100%;
+    padding: rem(15);
+    font-size: rem(17);
+    font-weight: $medium;
+    font-family: $second-font-family;
+    color: $black;
+    border-radius: rem(4);
+    background-color:  $black;
+    text-align: center;
+
+    @include mq("md") {
+        max-width: rem(275);
+        padding: rem(11);
+        font-size: rem(14);
+    }
+}
+
+.thanks__btn-text {
+    position: relative;
+    left: rem(10);
+    text-transform: uppercase;
+}
+
+.thanks__btn-text::before {
+    content: "";
+    position: absolute;
+    mask-image: url(../images/common/icon-arrow-left.svg);
+    background-color:  $black;
+    left: rem(-20);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    height: rem(9);
+    width: rem(9);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.thanks__btn:hover {
+    opacity: 0.7;
+}
+
+.thanks__btn-link:hover .thanks__btn-text::before {
+    transform: translateX(rem(-5)) translateY(-50%);
+}

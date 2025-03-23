@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.company {
+    background-image: url(../images/common/company-sp.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: rem(183);
+    transition: 0.7s ease;
+
+    @include mq("md") {
+        background-image: url(../images/common/company-pc.jpg);
+        height: rem(321);
+
+    }
+}
+
+.company:hover {
+    opacity: 0.8;
+}
+
+.company__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.company__title {
+    text-align: center;
+
+}
+
+.common-title__jp-title.common-title__jp-title--company {
+    color: $white;
+}
+
+.common-title__eng-title.common-title__eng-title--company {
+    font-size: rem(30);
+    font-weight: $black1;
+    font-family: $second-font-family;
+    color: $white;
+}

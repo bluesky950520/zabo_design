@@ -1,0 +1,36 @@
+@use "global" as *;
+
+// .nicebase-cards__swiper {
+//     @include mq("md") {
+//         display: flex;
+//         flex-wrap: wrap;
+//         gap: rem(20);
+//     }
+// }
+
+// .nicebase-cards__item {
+//     @include mq("md") {
+//         flex: 1 1 calc(33.333% - rem(20)); /* 3列レイアウト */
+//         max-width: calc(33.333% - rem(20)); /* 3列レイアウト */
+//     }
+// }
+
+/* Swiperを無効化するときの修正 */
+// .nicebase-cards__swiper.swiper {
+//     @include mq("md") {
+//         overflow: visible;
+//         display: flex;
+//         flex-wrap: wrap;
+//         gap: rem(20);
+//     }
+// }
+
+/* Swiperの影響をリセット */
+.nicebase-cards__swiper .swiper-wrapper {
+    @include mq("md") {
+        display: flex;
+        // flex-wrap: wrap;
+        justify-content: center;
+        gap: rem(20);
+    }
+}

@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.layout-nicebase {
+    margin-top: rem(50);
+
+    @include mq("md") {
+        margin-top: rem(96);
+    }
+}

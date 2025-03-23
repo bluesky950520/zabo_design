@@ -1,0 +1,60 @@
+@use "global" as *;
+
+body {
+    position: relative;
+}
+
+.page-top {
+    position: fixed;
+    display: block;
+    width: rem(36);
+    height: rem(36);
+    right: rem(19.2);
+    bottom: rem(20);
+    // background: transparent;
+    // border-radius: 50%;
+    // border: solid rem(1)  $black;
+    cursor: pointer;
+    transition: 0.7s ease;
+    z-index: 999;
+
+    @include mq("md") {
+        width: rem(51);
+        height: rem(51);
+        right: rem(15);
+    }
+}
+
+.page-top::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: rem(36);
+    height: rem(36);
+    display: inline-block;
+    transform: translate(-60%, -50%);
+    background: $white;
+    mask-image: url(../images/common/top-buck-btn.svg);
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    transition: 0.7s ease;
+
+    @include mq("md") {
+        width: rem(51);
+        height: rem(51);
+    }
+}
+
+.page-top:hover {
+    opacity: 0.7;
+}
+
+.page-top:hover::before {
+    background: $white;
+    mask-image: url(../images/common/top-buck-btn.svg);
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+}

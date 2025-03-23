@@ -1,0 +1,325 @@
+@use "global" as *;
+
+.service-card {
+    position: relative;
+}
+
+.service-card__img1 {
+    display: block;
+    position: absolute;
+    width: rem(200);
+    height: rem(200);
+    // margin-top: rem(60);
+    // aspect-ratio: 235/225;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    top: 2%;
+    left: 43%;
+
+    @include mq("md") {
+        top: calc(50% - rem(118)); // `.service-card__body` の中央基準で調整
+        left: calc(50% + rem(50)); // `.service-card__body` の中央から少し右へ
+        transform: translate(-50%, -50%); // 中央揃え
+        width: rem(250);
+        height: rem(250);
+        margin-top: 0;
+
+    }
+
+}
+
+
+// .service-card__img1:nth-child(3) {
+//     display: block;
+//     position: absolute;
+//     width: rem(200);
+//     height: rem(200);
+//     // margin-top: rem(60);
+//     // aspect-ratio: 235/225;
+//     overflow: hidden;
+//     opacity: 0;
+//     transform: translateY(30px);
+//     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+//     // top: 2%;
+//     // left: 43%;
+
+//     @include mq("md") {
+//         top: rem(64);
+//         left: rem(704);
+//         max-width: rem(367);
+//         max-height: rem(236);
+//         margin-top: 0;
+
+//     }
+
+// }
+
+.service-card__img1.is-animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card__img1.is-animated {
+    opacity: 1;
+    animation: poyoyonImage 1s ease-in-out forwards;
+}
+
+@keyframes poyoyonImage {
+    0% {
+        transform: scale(1.0, 1.0) translateY(-20px);
+        opacity: 0;
+    }
+
+    15% {
+        transform: scale(0.98, 0.9) translateY(5px);
+        opacity: 1;
+    }
+
+    30% {
+        transform: scale(1.02, 1.0) translateY(8px);
+    }
+
+    50% {
+        transform: scale(0.98, 1.05) translateY(-8px);
+    }
+
+    70% {
+        transform: scale(1.0, 0.9) translateY(5px);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0) translateY(0);
+    }
+}
+
+.service-card__img1 img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.service-card__content {
+    padding-top: rem(200);
+
+    @include mq("md") {
+        display: flex;
+        gap: 6.19%;
+        align-items: flex-end;
+        justify-content: space-between;
+        // flex-direction: row-reverse;
+        margin-top: rem(33);
+        padding-top: 0;
+    }
+}
+
+.service-card__img2 {
+    position: relative;
+    aspect-ratio: 335/219;
+    overflow: visible;
+
+
+    @include mq("md") {
+        aspect-ratio: 651/425;
+        width: 59.18%;
+    }
+}
+
+.service-card__img2::before {
+    content: "";
+    position: absolute;
+    top: -26%;
+    /* 画像を浮かせる */
+    left: 0;
+    /* 画面右端に配置 */
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    background-image: url(/images/common/hukidasi-nice-left.svg);
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+    width: rem(135);
+    height: rem(128);
+
+    @include mq("md") {
+        top: -14%;
+        /* 画像を浮かせる */
+        left: -8%;
+        width: rem(160);
+        height: rem(160);
+    }
+}
+
+.service-cards__item:nth-child(2) .service-card__img2::before,
+.service-cards__item:nth-child(4) .service-card__img2::before {
+    top: -36%;
+    /* 例: 上に少しずらす */
+    left: 60%;
+    /* 例: 左に寄せる */
+    background-image: url(/images/common/hukidasi-nice-right.svg);
+
+    @include mq("md") {
+        top: -7%;
+        left: 83%;
+    }
+}
+
+
+
+.service-card__img2.is-animated::before {
+    opacity: 1;
+    animation: poyoyonImage 1s ease-in-out forwards;
+}
+
+@keyframes poyoyonImage {
+    0% {
+        transform: scale(1.0, 1.0) translateY(-20px);
+        opacity: 0;
+    }
+
+    15% {
+        transform: scale(0.98, 0.9) translateY(5px);
+        opacity: 1;
+    }
+
+    30% {
+        transform: scale(1.02, 1.0) translateY(8px);
+    }
+
+    50% {
+        transform: scale(0.98, 1.05) translateY(-8px);
+    }
+
+    70% {
+        transform: scale(1.0, 0.9) translateY(5px);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0) translateY(0);
+    }
+}
+
+
+
+
+.service-card__img2 img {
+    width: 100%;
+    // height: 100%;
+    object-fit: cover;
+    border-radius: rem(5);
+
+    @include mq("md") {
+        border-radius: rem(10);
+
+    }
+}
+
+.service-card__body {
+    margin-top: rem(26);
+
+    @include mq("md") {
+        width: 34.63%;
+    }
+}
+
+.service-card__title {
+    position: relative;
+    display: block;
+    // overflow: hidden;
+    width: 100%;
+    max-height: rem(36);
+    font-size: rem(18);
+    font-weight: $black1;
+    color: $white;
+
+    @include mq("md") {
+        max-height: rem(45);
+    }
+
+}
+
+.service-card__title-wrap {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    padding: rem(4.5) rem(13);
+
+    @include mq("md") {
+        padding: rem(9) rem(13);
+    }
+}
+
+.service-card__title-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    transform-origin: left center;
+    opacity: 0;
+    transform: scaleX(0) translateX(-5%);
+    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 0;
+
+    /* 隠れないように修正 */
+    @include mq("md") {
+        padding: rem(7);
+    }
+}
+
+.service-card__title-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* アニメーション実行時 */
+/* アニメーション実行時 */
+.service-card.is-animated .service-card__title-wrap::before {
+    opacity: 1;
+    /* 透明度を戻す */
+    transform: scaleX(1) translateX(0);
+    transition: transform 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 文字色変更 */
+.service-card.is-animated .service-card__title-text {
+    color: $white;
+}
+
+/* 背景色のスライドアニメーション */
+@keyframes bg-slide {
+    0% {
+        opacity: 0;
+        transform: scaleX(0) translateX(-5%);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scaleX(1) translateX(0);
+    }
+
+    100% {
+        transform: scaleX(1) translateX(0);
+    }
+}
+
+
+.service-card__text {
+    font-size: rem(14);
+    font-weight: $semibold;
+    color: $black;
+    margin-top: rem(12);
+
+    @include mq("md") {
+        font-size: rem(16);
+        line-height: 1.8;
+        letter-spacing: 0.1em;
+        margin-top: rem(6);
+
+    }
+}

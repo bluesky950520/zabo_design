@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.sidebar-title {
+    font-size: rem(14);
+    font-weight: $medium;
+    line-height: 1;
+    color: $black;
+    padding: rem(18) rem(15);
+    width: 100%;
+    border-bottom: double rem(5) $black;
+}

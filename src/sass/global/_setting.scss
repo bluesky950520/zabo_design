@@ -1,0 +1,144 @@
+@use "sass:math";
+
+////////////////////
+// インナー幅設定
+////////////////////
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1100px;
+// ※キャンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 20px;
+// ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
+
+
+////////////////////
+// フォント設定
+////////////////////
+
+$base-font-family: "Gothic A1", sans-serif;
+$second-font-family: "League Spartan", sans-serif;
+$third-font-family: "Lato", sans-serif;
+// ※検証ツールでしっかり反映されているか確認する
+
+$fz-base: 1rem;
+$lh-base: 1.5;
+
+// フォントウェイト
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$black1: 900;
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+$black: #000000;
+$blue1: #5B83DB;
+$blue2: #3068E3;
+$blue3: #D0DBEF;
+$blue4: #DFE8F7;
+$grey: #CDCDCD;
+$yellow1: #ECE025;
+$yellow2: #F6E900;
+$yellow3: #FFFCD9;
+$white: #fff;
+$red: #E20000;
+
+body {
+  font-size: $fz-base;
+  line-height: $lh-base;
+  font-family: $base-font-family;
+  color: $black;
+}
+
+////////////////////
+// メディアクエリとブレークポイントの設定
+////////////////////
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 374,
+  md2: 540,
+  md: 768,
+  lg: 1024,
+  xl: 1440,
+);
+
+
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md2: "screen and (min-width: #{map-get($breakpoints,'md2')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+@mixin mq2($mediaquery: md2) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+@mixin mq1($mediaquery: sm) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+////////////////////
+// 非表示設定
+////////////////////
+
+//768px以上を表示
+.u-desktop {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+  }
+}
+
+//モバイルのみ表示
+.u-mobile {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+//PCファースト
+//768px以上を表示
+// .u-desktop {
+//   @include mq("md") {
+//     display: none;
+//   }
+// }
+
+// //モバイルのみ表示
+// .u-mobile {
+//   display: none;
+
+//   @include mq("md") {
+//     display: block;
+//   }
+// }

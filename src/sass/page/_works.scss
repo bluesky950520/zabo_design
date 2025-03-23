@@ -1,0 +1,255 @@
+@use "global" as *;
+
+.works {
+    position: relative;
+    overflow: hidden;
+    background-color: $yellow2;
+}
+
+.works__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(37);
+    @include mq("md") {
+        padding-top: rem(128);
+        padding-bottom: rem(20);
+    }
+}
+.works__block {
+display: flex;
+justify-content: center;
+}
+
+.works__title {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+.works__title::before {
+    content: "";
+    position: absolute;
+    top: -70%; /* 例: 上に少しずらす */
+    left: -74%; /* 例: 左に寄せる */
+    transform: translate(50%, 50%);
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    background-image: url(../images/common/hukidasi-nice-left.svg);
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+    width: rem(83);
+    height: rem(79);
+
+    @include mq("md") {
+        top: -116%;
+        left: -102%;
+        width: rem(150);
+        height: rem(150);
+    }
+}
+
+.works__title::after {
+    content: "";
+    position: absolute;
+    top: -70%; /* 例: 上に少しずらす */
+    left: 100%; /* 例: 左に寄せる */
+    opacity: 0;
+    width: rem(83);
+    height: rem(79);
+    transform: translate(50%, 50%);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    background-image: url(../images/common/hukidasi-nice-right.svg);
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+    @include mq("md") {
+        top: -120%; /* 例: 上に少しずらす */
+        left: 100%; /* 例: 左に寄せる */
+        transform: translate(50%, 50%);
+        width: rem(150);
+        height: rem(150);
+    }
+}
+
+.works__title.is-animated::before {
+    opacity: 1;
+    animation: poyoyonImage 1s ease-in-out forwards;
+}
+.works__title.is-animated::after {
+    opacity: 1;
+    animation: poyoyonImage 1s ease-in-out forwards;
+}
+
+@keyframes poyoyonImage {
+    0% {
+        transform: scale(1.0, 1.0) translateY(-20px);
+        opacity: 0;
+    }
+
+    15% {
+        transform: scale(0.98, 0.9) translateY(5px);
+        opacity: 1;
+    }
+
+    30% {
+        transform: scale(1.02, 1.0) translateY(8px);
+    }
+
+    50% {
+        transform: scale(0.98, 1.05) translateY(-8px);
+    }
+
+    70% {
+        transform: scale(1.0, 0.9) translateY(5px);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0) translateY(0);
+    }
+}
+
+
+
+
+.works__wrapper {
+    margin-top: rem(19);
+
+    @include mq("md") {
+        margin: rem(38) calc(50% - 50vw) 0;
+        width: 100vw;
+    }
+
+    // position: relative;
+    // overflow: hidden;
+    // width: 100%;
+    // padding-top: rem(63);
+}
+
+
+.works__list {
+    display: flex; // Swiperのスライドを正常に動作させるためにflexに変更
+    flex-direction: column;
+    gap: rem(16);
+
+    @include mq("md") {
+        align-items: center;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // gap: rem(16);
+
+    // @include mq("md") {
+    //     grid-template-columns: repeat(3, 1fr);
+    //     gap: rem(22);
+
+    // }
+}
+
+
+.works__cards {
+    background-color: $blue3;
+    background-image: url(/images/common/change-bg.svg);
+    background-repeat: no-repeat;
+    background-position: rem(-115) rem(-45);
+    background-size: 136%;
+
+    @include mq("md") {
+        background-position: 156% 29%;
+        background-size: 66%;
+    }
+}
+
+
+
+/* Swiperのナビゲーションボタン */
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+
+    @include mq("md") {
+        position: absolute;
+        display: block;
+        top: 16%;
+        transform: translateY(-50%);
+        width: rem(37);
+        height: rem(37);
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+}
+
+/* 左右の矢印画像 */
+.swiper-button-prev {
+    @include mq("md") {
+        left: 84%;
+        background-image: url('/images/common/works-right-btn.svg');
+    }
+}
+
+.swiper-button-next {
+    @include mq("md") {
+        right: 17%;
+        background-image: url('/images/common/works-left-btn.svg');
+    }
+}
+
+/* Swiperのデフォルト矢印を非表示 */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+/* ３点リーダー（ページネーション） */
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    @include mq("md") {
+        margin: 0 rem(3) 0;
+    }
+
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    @include mq("md") {
+        bottom: rem(300);
+    }
+}
+
+.works__pagination .swiper-pagination-bullet {
+    display: none;
+
+    @include mq("md") {
+        display: inline-block;
+        background-color: $white;
+        border: rem(1) solid $black;
+        width: rem(7);
+        height: rem(7);
+        opacity: 1;
+    }
+}
+
+.works__pagination .swiper-pagination-bullet-active {
+    @include mq("md") {
+        background-color: $black;
+    }
+}
+
+.works__list-btn {
+    display: flex;
+    justify-content: center; // 水平方向中央揃え
+    align-items: center; // 垂直方向中央揃え（必要なら）
+    width: 100%; // 親要素の幅いっぱいにする
+    margin-top: rem(40);
+}
+
+.works__list-btn .common-list-btn {
+    @include mq("md") {
+        display: none;
+    }
+}

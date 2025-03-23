@@ -1,0 +1,148 @@
+@use "global" as *;
+
+.expert-card {
+    // position: relative;
+    // overflow: visible;
+    display: block;
+    height: 100%;
+    background-color: $white;
+    border-radius: rem(5);
+}
+
+// .expert-card::before {
+//     content: "";
+//     position: absolute;
+//     top: 9%;
+//     /* カードの枠より上に飛び出る */
+//     left: 65%;
+//     // transform: translateX(-50%);
+//     width: rem(330);
+//     height: rem(236);
+//     background: url('/images/common/expert-hukidasi.svg') no-repeat center/contain;
+
+
+//     opacity: 0;
+//     visibility: hidden;
+//     transition: opacity 0.3s ease, transform 0.3s ease;
+// }
+
+// .expert-card:hover::before {
+//     opacity: 1;
+//     visibility: visible;
+//     transform: translateX(-50%) translateY(rem(-10)); /* 少し上にスライド */
+// }
+
+
+.expert-card__inner {
+    padding: rem(25) rem(26) rem(33);
+    overflow: visible;
+
+    @include mq("md") {
+        padding: rem(29.5) rem(24) rem(33);
+
+    }
+}
+
+// .expert-card__comment {
+//     // position: relative;
+
+//     position: absolute;
+//     top: rem(-100); /* 初期位置をカードの上部に設定 */
+//     left: 50%;
+//     transform: translateX(-50%);
+//     opacity: 0;
+//     visibility: hidden;
+//     transition: opacity 0.3s ease, transform 0.3s ease;
+// }
+
+// .expert-card:hover .expert-card__comment {
+//     opacity: 1;
+//     visibility: visible;
+//     transform: translateX(-50%) translateY(rem(-10)); /* 少し上にスライド */
+// }
+
+
+// .expert-card__comment span {
+//     position: absolute;
+//     font-size: rem(14);
+//     font-weight: $black1;
+//     font-family: $third-font-family;
+//     line-height: 1;
+//     top: rem(-48);
+//     left: rem(97);
+//     width: 100%;
+// }
+
+.expert-card__content {
+
+    // height: 100%;
+    @include mq("md") {
+        display: flex;
+        gap: 5.11%;
+        align-items: flex-start;
+    }
+}
+
+.expert-card__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq("md") {
+        width: 33.19%;
+    }
+
+}
+
+.expert-card__img {
+    border-radius: 50%;
+    max-width: rem(138);
+    width: 100%;
+
+    @include mq("md") {
+        max-width: rem(163);
+        margin-top: rem(37);
+        //    width: 33.19%;
+    }
+}
+
+.expert-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.expert-card__body {
+    margin-top: rem(16);
+
+    @include mq("md") {
+        width: 61.7%;
+    }
+}
+
+.expert-card__title {
+    font-size: rem(20);
+    font-weight: $black1;
+    color: $blue1;
+
+    @include mq("md") {
+        font-size: rem(22);
+    }
+}
+
+.expert-card__textarea {
+    margin-top: rem(10);
+    height: 100%;
+}
+
+.expert-card__text {
+    font-size: rem(14);
+    font-weight: $semibold;
+    color: $black;
+
+    @include mq("md") {
+        font-size: rem(16);
+        line-height: 1.8;
+    }
+}

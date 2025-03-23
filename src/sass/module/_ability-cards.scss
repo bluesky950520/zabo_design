@@ -1,0 +1,78 @@
+@use "global" as *;
+
+.ability-cards {
+    position: relative;
+}
+
+.ability-cards::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 98%; /* 例: 上に少しずらす */
+    // transform: translateX(-50%) translateY(22px);
+    opacity: 0;
+    
+    width: rem(327);
+    height: rem(265);
+    // transform: translateY(22px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    background-image: url(../images/common/ability-woman.svg);
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+    @include mq("md") {
+        // top: -12%;
+        // left: 77%;
+        // width: clamp(rem(150), 30vw, rem(301));
+        // height: rem(305);
+        // left: initial;
+        top: -9%;
+        right: clamp(rem(-166), calc(50% - 48vw), rem(672));
+        // transform: translateX(-50%);
+        // width: clamp(rem(300), 35vw, rem(360));
+    }
+}
+
+.ability-cards.is-animated::before {
+    opacity: 1;
+    animation: poyoyonImage 1s ease-in-out forwards;
+}
+
+@keyframes poyoyonImage {
+    0% {
+        transform: scale(1.0, 1.0) translateY(-20px);
+        opacity: 0;
+    }
+
+    15% {
+        transform: scale(0.98, 0.9) translateY(5px);
+        opacity: 1;
+    }
+
+    30% {
+        transform: scale(1.02, 1.0) translateY(8px);
+    }
+
+    50% {
+        transform: scale(0.98, 1.05) translateY(-8px);
+    }
+
+    70% {
+        transform: scale(1.0, 0.9) translateY(5px);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0) translateY(0);
+    }
+}
+
+
+
+.ability-cards__item+.ability-cards__item {
+    margin-top: rem(17);
+
+    @include mq("md") {
+        margin-top: rem(30);
+
+    }
+}

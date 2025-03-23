@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.contact-btn {
+    width: 100%;
+    font-size: rem(20);
+    font-weight: $black1;
+    line-height: 1;
+    color: $black;
+    padding: rem(32.5) rem(20);
+}
+
+// .contact-btn.contact-btn--confirm {
+//     @include mq("md") {
+//         padding: rem(12);
+//     }
+// }
+
+// .contact-btn.contact-btn--confirm-back {
+//     @include mq("md") {
+//         padding: rem(12);
+//     }
+// }

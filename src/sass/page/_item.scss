@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.item {
+    background-color: $yellow2;
+}
+
+.item__title {
+    text-align: center;
+}
+
+.item__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+    max-width: rem(600);
+
+    @include mq("md") {
+        padding-top: rem(87);
+        padding-bottom: rem(128);
+        max-width: rem(1150);
+
+    }
+}

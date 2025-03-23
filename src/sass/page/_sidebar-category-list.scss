@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.sidebar-category-list__item {
+    border-bottom: rem(1) solid  $black;
+}
+
+.sidebar-category-list__item:last-of-type {
+    border-bottom: 0;
+}
+
+.sidebar-category-list__link {
+    display: inline-block;
+    width: 100%;
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: 1;
+    padding: rem(21) 0;
+    transition: 0.3s ease;
+}
+
+.sidebar-category-list__link:hover {
+    opacity: 0.7;
+}

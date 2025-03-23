@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.layout-breadcrumb {
+
+
+    @include mq("md") {
+        margin-top: prem(10);
+    }
+}
+
+
+.layout-breadcrumb.layout-breadcrumb--single {
+    margin-top: prem(195);
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}

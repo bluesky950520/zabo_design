@@ -1,0 +1,468 @@
+@use "global" as *;
+
+
+
+.contact-form__content+.contact-form__content {
+    margin-top: rem(12);
+
+    @include mq("md") {
+        margin-top: rem(16);
+    }
+}
+
+.contact-form__content:nth-child(8) {
+    margin-top: rem(32);
+
+    @include mq("md") {
+        margin-top: rem(35);
+    }
+}
+
+.contact-form__content:nth-child(10) {
+    margin-top: rem(32);
+
+    @include mq("md") {
+        margin-top: rem(35);
+    }
+}
+
+.contact-form__label-body {
+    display: flex;
+    // align-items: center;
+
+    // @include mq("md") {
+    //     display: block;
+    // }
+}
+
+.contact-form__label-text {
+    font-size: rem(16);
+    font-weight: $black1;
+    color: $black;
+    display: flex;
+    align-items: center;
+}
+
+.contact-form__label-subtext {
+    font-size: rem(15);
+    font-weight: $regular;
+    padding-left: 1em;
+
+    @include mq("md") {
+        margin-top: rem(10);
+        font-size: rem(14);
+        padding-left: 0;
+    }
+}
+
+.contact-form__input {
+    margin-top: rem(5);
+    font-weight: $bold;
+}
+
+// .contact-form__input.contact-form__input--zipcode {
+//     // display: flex;
+
+//     // @include mq("md") {
+//     //     display: block;
+//     // }
+// }
+
+
+.contact-form__input-text,
+.contact-form__email-input,
+.contact-form__tel-input,
+.contact-form__zipcode-input,
+.contact-form__address-input,
+.contact-form__input-textarea {
+    width: 100%;
+    padding: rem(8);
+    border-radius: rem(5);
+    background-color: $white;
+}
+
+.contact-form__input-text {
+    max-width: rem(240);
+
+    @include mq("md") {
+        max-width: rem(497);
+
+    }
+}
+
+.contact-form__email-input {
+    max-width: rem(703);
+}
+
+.contact-form__tel-input {
+    max-width: rem(185);
+
+    @include mq("md") {
+        max-width: rem(335);
+
+
+    }
+}
+
+.contact-form__zipcode-input {
+    max-width: rem(185);
+
+    @include mq("md") {
+        max-width: rem(251);
+
+    }
+}
+
+.contact-form__address-input {
+    max-width: rem(1100);
+}
+
+.contact-form__search-btn {
+    font-size: rem(13);
+    font-weight: $black1;
+    color: $white;
+    line-height: 1;
+    padding: rem(3.5) rem(16.5);
+    background-color: $black;
+    border-radius: rem(11);
+    margin-left: rem(14);
+
+    @include mq("md") {
+        font-size: rem(14);
+        padding: rem(4) rem(27);
+        margin-left: rem(12);
+
+    }
+}
+
+.contact-form__radio {
+    display: grid;
+    margin-top: rem(15);
+
+    @include mq("md") {
+        display: flex;
+        margin-top: rem(18);
+        // flex-wrap: wrap;
+        // // gap: 20px; /* ボタン間の間隔 */
+        // align-items: center;
+    }
+}
+
+.contact-form__radio label {
+
+    @include mq("md") {
+        margin-left: rem(24);
+
+    }
+
+}
+
+.contact-form__radio label:first-child {
+    margin-left: 0;
+
+}
+
+.contact-form__radio label span {
+    width: rem(100);
+}
+
+.contact-form__radio label:nth-child(2) {
+    @include mq("md") {
+        margin-left: rem(26);
+    }
+}
+
+.contact-form__radio input+span {
+    position: relative;
+    padding-left: rem(20);
+    font-size: rem(16);
+    font-weight: $black;
+    line-height: 1;
+}
+
+.contact-form__radio input+span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: rem(15);
+    height: rem(15);
+    background-color: $white;
+    border: rem(1) solid $black;
+    border-radius: 50%;
+}
+
+.contact-form__radio input+span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: rem(3.5);
+    transform: translateY(-50%);
+    border: rem(1) solid transparent;
+    border-radius: 50%;
+    width: rem(8);
+    height: rem(8);
+    background: $black;
+    opacity: 0;
+}
+
+.contact-form__radio input:checked+span::after {
+    opacity: 1;
+}
+
+
+
+.contact-form__input-text::placeholder,
+.contact-form__email-input::placeholder,
+.contact-form__tel-input::placeholder,
+.contact-form__zipcode-input::placeholder,
+.contact-form__address-input::placeholder,
+.contact-form__input-textarea::placeholder {
+    font-size: rem(16);
+    font-weight: $medium;
+    color: $grey;
+}
+
+.contact-form__input-textarea {
+    height: rem(160);
+    resize: none;
+    padding: rem(18) rem(16);
+}
+
+.contact-form__check {
+    margin-top: rem(31);
+
+    @include mq("md") {
+        margin-top: rem(24);
+        text-align: center;
+    }
+}
+
+.contact-form__check input[type=checkbox]+span {
+    font-size: rem(14);
+    font-weight: $medium;
+
+    @include mq1("sm") {
+        font-size: rem(12);
+
+    }
+}
+
+input[type=checkbox]+span {
+    position: relative;
+    padding-left: rem(25);
+
+    @include mq1("sm") {
+        padding-left: rem(15);
+    }
+}
+
+input[type=checkbox]+span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: rem(17);
+    height: rem(17);
+    border: rem(1) solid $black;
+    background-color: $black;
+    border-radius: rem(1);
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+input[type=checkbox]+span::after {
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+input[type=checkbox]:checked+span::after {
+    border-bottom: 2px solid $black;
+    border-left: 2px solid $black;
+    content: "";
+    display: block;
+    height: 0.2625rem;
+    left: 0.5%;
+    margin-left: 0.1em;
+    margin-top: -0.05em;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 0.6125rem;
+}
+
+.contact-form__label-required {
+    // display: inline-block;
+    font-size: rem(10);
+    font-weight: $black1;
+    color: $black;
+    background-color: $yellow2;
+    line-height: 1;
+    padding: rem(3) rem(10);
+    border-radius: rem(8);
+    margin-left: rem(8);
+}
+
+.contact-form__btn-wrapper {
+    text-align: center;
+}
+
+.contact-form__btn {
+    position: relative;
+    display: inline-block;
+    min-width: rem(335);
+    background-color: $yellow2;
+    overflow: hidden;
+
+    margin-top: rem(25);
+    // padding: rem(30) rem(10);
+    border-radius: rem(42.5);
+    text-align: center;
+    transition: .3s ease;
+    z-index: 1;
+    cursor: pointer;
+
+    @include mq("md") {
+        min-width: rem(783);
+        margin-top: rem(73);
+        // padding: rem(30) rem(10);
+
+    }
+}
+
+// .contact-form__btn::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     width: 0;
+//     display: block;
+//     background-color: $blue1;
+//     border-radius: rem(42.5);
+//     z-index: -1;
+//     transition: 0.3s ease;
+// }
+
+.contact-form__file-label {
+    font-size: rem(14);
+    font-weight: $black1;
+    color: $white;
+    line-height: 1;
+    padding: rem(4) rem(27);
+    background-color: $black;
+    border-radius: rem(11);
+}
+
+.contact-form__file-note {
+    font-size: rem(14);
+    font-weight: $medium;
+    color: $black;
+    line-height: 1;
+    margin-left: rem(12);
+
+    @include mq("md") {
+        margin-left: rem(20);
+    }
+}
+
+.contact-form__check-text a {
+    font-size: rem(16);
+    font-weight: $semibold;
+    line-height: 1.8;
+    color: $blue1;
+    /* 青色 */
+    text-decoration: underline;
+    /* 下線をつける */
+    transition: color 0.3s ease;
+}
+
+.contact-form__check-text a:hover {
+    opacity: 0.7;
+    /* 濃い青に変更 */
+}
+
+// .contact-form__btn:hover {
+//     border: rem(1) solid $black;
+// }
+
+.contact-form__btn:hover::before {
+    width: 100%;
+}
+
+.contact-btn {
+    font-size: rem(20);
+    font-weight: $black1;
+
+}
+
+
+
+
+
+.wpcf7-spinner {
+    display: none;
+}
+
+.contact-form__input input[type="file"] {
+    display: none;
+}
+
+
+.contact-form__btn:hover .contact-btn {
+    color: $black;
+}
+
+
+// .works-list__btn-link {
+//     display: inline-block;
+//     background-color: $black;
+//     font-size: rem(14);
+//     font-weight: $black1;
+//     line-height: 1;
+//     color: $white;
+//     min-width: rem(210);
+//     padding: rem(10.5) rem(13);
+//     border-radius: rem(20);
+//     text-align: center;
+//     transition: .3s ease;
+//     overflow: hidden;
+//     position: relative;
+//     z-index: 1;
+//     @include mq("md") {
+//         min-width: rem(333);
+//         font-size: rem(20);
+//         padding: rem(16.5);
+//         border-radius: rem(26.5);
+//     }
+// }
+
+// ホバーエフェクトの背景
+.contact-form__btn::after {
+    background: $blue1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: 0.3s ease;
+    z-index: -1;
+}
+
+// ホバー時のエフェクト
+.contact-form__btn:hover {
+    color: $white;
+}
+
+.contact-form__btn:hover::after {
+    transform: scale(1, 1);
+    transition: 0.3s ease;
+}

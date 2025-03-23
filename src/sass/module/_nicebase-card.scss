@@ -1,0 +1,207 @@
+@use "global" as *;
+
+.nicebase-card {
+    background-color: $blue1;
+    border-radius: rem(5);
+    overflow: visible;
+    position: relative;
+}
+
+// .nicebase-card::before {
+//     content: "";
+//     position: absolute;
+//     top: -7%; /* カードの枠より上に飛び出る */
+//     left: 6%;
+//     // transform: translateX(-50%);
+//     width: rem(72);
+//     height: rem(70);
+//     background: url('/images/common/about-nicebase-hukidasi.svg') no-repeat center/contain;
+//     // z-index: -1; /* 数字の後ろに配置 */
+// }
+
+.nicebase-card__inner {
+    padding: rem(27) rem(26) rem(34);
+    overflow: visible;
+    @include mq("md") {
+        padding: rem(28) rem(26) rem(26);
+
+    }
+}
+
+// .nicebase-card__number {
+//     position: relative;
+//     // top: 0;
+//     // left: 0; /* 吹き出しをカードの上に配置 */
+//     // left: 7%;
+//     // transform: translateX(-50%);
+//     // display: flex;
+//     // align-items: center;
+//     // justify-content: center;
+//     // width: rem(60);
+//     // height: rem(50);
+//     // z-index: 2; /* 数字を前面に */
+// }
+
+// // .nicebase-card__number::before {
+// //     content: "";
+// //     position: absolute;
+// //     top: -40%; /* カードの枠より上に飛び出る */
+// //     left: 0%;
+// //     // transform: translateX(-50%);
+// //     width: rem(72);
+// //     height: rem(70);
+// //     background: url('/images/common/about-nicebase-hukidasi.svg') no-repeat center/contain;
+// //     z-index: -1; /* 数字の後ろに配置 */
+// // }
+
+// .nicebase-card__number span {
+//     position: absolute;
+//     font-size: rem(18);
+//     font-weight: $black1;
+//     line-height: 1;
+//     top: rem(-23);
+//     left: rem(13);
+//     // position: relative;
+//     // z-index: 2; /* 背景画像より上に表示 */
+// }
+
+.nicebase-card__img {
+    aspect-ratio: 209/164;
+    @include mq("md") {
+        aspect-ratio: 300/183;
+
+    }
+}
+
+.nicebase-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: rem(5);
+}
+
+.nicebase-card__body {
+    margin-top: rem(20);
+
+}
+
+.nicebase-card__title {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    font-size: rem(16);
+    font-weight: $black1;
+    @include mq("md") {
+        font-size: rem(22);
+        letter-spacing: 0.1em;
+    }
+}
+
+.nicebase-card__title-wrap {
+    position: relative;
+    // display: inline-block;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.nicebase-card__title-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    transform-origin: left center;
+    opacity: 0;
+    transform: scaleX(0) translateX(-5%);
+    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 0;
+    /* 隠れないように修正 */
+}
+
+.nicebase-card__title-text {
+    position: relative;
+    z-index: 1;
+    padding: rem(3) rem(8);
+}
+
+/* アニメーション実行時 */
+/* アニメーション実行時 */
+.nicebase-card.is-animated .nicebase-card__title-wrap::before {
+    opacity: 1;
+    /* 透明度を戻す */
+    transform: scaleX(1) translateX(0);
+    transition: transform 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 文字色変更 */
+.nicebase-card.is-animated .nicebase-card__title-text {
+    color: $black;
+}
+
+/* 背景色のスライドアニメーション */
+@keyframes bg-slide {
+    0% {
+        opacity: 0;
+        transform: scaleX(0) translateX(-5%);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scaleX(1) translateX(0);
+    }
+
+    100% {
+        transform: scaleX(1) translateX(0);
+    }
+}
+
+
+
+.nicebase-card__textarea {
+    margin-top: rem(10);
+
+}
+
+.nicebase-card__text {
+    font-size: rem(14);
+    font-weight: $semibold;
+    color: $white;
+    @include mq("md") {
+        font-size: rem(16);
+        font-weight: $bold;
+        line-height: 1.8;
+        letter-spacing: 0.1em;
+    }
+
+}
+
+// .nicebase-cards__wrapper {
+//     display: block; /* スマホではSwiperが動作するように */
+
+//     @include mq("md") {
+//         display: flex;
+//         flex-wrap: wrap;
+//         gap: rem(20); /* カードの間隔 */
+//     }
+// }
+
+
+.nicebase-cards__swiper.swiper {
+    overflow: initial;
+}
+
+.nicebase-cards__item.swiper-slide {
+    height: auto;
+    max-width: rem(262);
+    width: 100%;
+    @include mq("md") {
+        max-width: rem(353);
+
+    }
+
+}

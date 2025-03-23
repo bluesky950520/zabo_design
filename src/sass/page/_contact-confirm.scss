@@ -1,0 +1,142 @@
+@use "global" as *;
+
+.contact-confirm__inner {
+    max-width: rem(730);
+    width: 100%;
+    @include mq("md") {
+        max-width: rem(600);
+    }
+}
+
+.contact-confirm__introduction {
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: lh(38, 16);
+    text-align: left;
+
+    @include mq("md") {
+        font-size: rem(14);
+        line-height: lh(32, 14);
+    }
+}
+
+.contact-confirm__form {
+    margin-top: rem(94);
+
+    @include mq("md") {
+        margin-top: rem(35);
+    }
+}
+
+.confirm-form__content {
+    display: flex;
+
+    @include mq("md") {
+        display: block;
+    }
+}
+
+.confirm-form__content+.confirm-form__content {
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: rem(29);
+    }
+}
+
+.confirm-form__title {
+    font-size: rem(15);
+    font-weight: $medium;
+    max-width: rem(250);
+    width: 100%;
+    flex-shrink: 0;
+    @include mq("md") {
+        max-width: 100%;
+    }
+}
+
+.confirm-form__title span {
+    color: $red;
+}
+
+.confirm-form__text {
+    font-size: rem(14);
+    font-weight: $regular;
+
+    @include mq("md") {
+        margin-top: rem(9.6);
+    }
+}
+
+.confirm-form__text.confirm-form__text--textarea {
+    line-height: lh(32, 14);
+}
+
+.confirm-form__btn-wrapper {
+    display: flex;
+    gap: rem(80);
+    justify-content: center;
+    margin-top: rem(60);
+
+    @include mq("md") {
+        gap: rem(20);
+    }
+}
+
+.confirm-form__btn {
+    position: relative;
+    display: inline-block;
+    min-width: rem(280);
+    background-color:  $black;
+    border: rem(2) solid  $black;
+    border-radius: rem(4);
+    text-align: center;
+    transition: 0.3s ease;
+    z-index: 1;
+    cursor: pointer;
+
+    @include mq("md") {
+        min-width: rem(151);
+    }
+    @include mq1("sm") {
+        min-width: rem(130);
+    }
+}
+
+.confirm-form__btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background-color:  $black;
+    z-index: -1;
+    transition: 0.3s ease;
+}
+
+.confirm-form__btn.confirm-form__btn--back::before {
+    background-color:  $black;
+}
+
+.confirm-form__btn:hover {
+    border: rem(2) solid  $black;
+}
+
+.confirm-form__btn:hover::before {
+    width: 100%;
+}
+
+.confirm-form__btn:hover .contact-btn {
+    color:  $black;
+}
+
+.confirm-form__btn.confirm-form__btn--back:hover .contact-btn {
+    color:  $black;
+}
+
+.confirm-form__btn.confirm-form__btn--back {
+    background-color:  $black;
+}

@@ -1,0 +1,21 @@
+@use "global" as *;
+
+
+.drawer-title__en {
+    display: block;
+    color: $white;
+    font-size: rem(20);
+    font-weight: $black1;
+    font-family: $third-font-family;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.drawer-title__jp {
+    display: block;
+    margin-top: rem(8);
+    color: $white;
+    font-size: rem(12);
+    font-weight: $semibold;
+    line-height: 1;
+}

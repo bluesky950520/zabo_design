@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>Campanilismo</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="noindex">
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="icon" href="" />
+  <link rel="apple-touch-icon" href="" sizes="" />
+
+  <!-- google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <!-- Font Awesomeの読み込み -->
+  <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+  <!-- swiper -->
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- gsap -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script defer src="./js/script.js"></script>
+  <script defer src="./js/fade-in.js"></script>
+  <script defer src="./js/fade-in-image.js"></script>
+  <script defer src="./js/title_animation.js"></script>
+  <script defer src="./js/auto-screen.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header layout-header js-header">
+    <div class="header__inner inner">
+
+
+      <div class="header__title">
+        <a href="#" class="header__title-link">
+          <img src="./images/common/logo-pc.svg" alt="ミンパクデザイン " id="myImage" class="header__title-img js-header-title">
+        </a>
+      </div>
+
+      <!-- pc-nav -->
+      <nav class="header__nav u-desktop">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#works" class="header__nav-link">works</a></li>
+          <li class="header__nav-item"><a href="#about" class="header__nav-link">about&nbsp;nicebase</a></li>
+          <li class="header__nav-item"><a href="#ability" class="header__nav-link">ability</a></li>
+          <li class="header__nav-item"><a href="#expert" class="header__nav-link">expert</a></li>
+          <li class="header__nav-item"><a href="#service" class="header__nav-link">service</a></li>
+          <li class="header__nav-item"><a href="#item" class="header__nav-link">item</a></li>
+          <li class="header__nav-item"><a href="#flow" class="header__nav-link">flow</a></li>
+          <li class="header__nav-item"><a href="#contact" class="header__nav-link">contact</a></li>
+          <li class="header__nav-item"><a href="#q&a" class="header__nav-link">q&amp;a</a></li>
+        </ul>
+        <div class="header__sns">
+          <a href="https://www.instagram.com/yusuke76195296/" target="_blank" rel="noopener noreferrer"
+            class="header__sns-link"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </nav>
+
+      <!-- ハンバーガーボタン -->
+      <div class="header__btn">
+        <button class="header__hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="header__sns header__sns--sp u-mobile">
+          <a href="https://www.instagram.com/yusuke76195296/" target="_blank" rel="noopener noreferrer"
+            class="header__sns-link header__sns-link--sp"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <!-- sp-nav -->
+      <div class="header__drawer js-drawer u-mobile">
+        <div class="header__drawer-logo">
+          <img src="./images/common/drawer-logo.svg" alt="ミンパクデザイン">
+        </div>
+        <div class="header__sns-drawer">
+          <a href="https://www.instagram.com/yusuke76195296/" target="_blank" rel="noopener noreferrer"
+            class="header__sns-drawerLink"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="header__drawer-wrap">
+          <nav class="header__drawer-nav">
+            <ul class="header__drawer-list">
+              <li class="header__drawer-item">
+                <a href="#works" class="header__drawer-title drawer-title">
+                  <span class="drawer-title__en">works</span>
+                  <span class="drawer-title__jp">製作実例</span>
+                </a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#about" class="header__drawer-title drawer-title">
+                  <span class="drawer-title__en">about&nbsp;nicebase</span>
+                  <span class="drawer-title__jp">NICEBASEでできること</span>
+                </a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="" class="header__drawer-title drawer-title">
+                  <span class="drawer-title__en">ability</span>
+                  <span class="drawer-title__jp">NICEBASEの技術力</span>
+                </a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="" class="header__drawer-title drawer-title">
+                  <span class="drawer-title__en">expert</span>
+                  <span class="drawer-title__jp">NICEBASEを支えるメンバー</span>
+                </a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="" class="header__drawer-title drawer-title">
+                  <span class="drawer-title__en">service</span>
+                  <span class="drawer-title__jp">サービス内容</span>
+                </a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="" class="header__drawer-title drawer-title">
+                  <span class="drawer-title__en">item</span>
+                  <span class="drawer-title__jp">アイテム一覧</span>
+                </a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="" class="header__drawer-title drawer-title">
+                  <span class="drawer-title__en">flow</span>
+                  <span class="drawer-title__jp">ご注文の流れ</span>
+                </a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="" class="header__drawer-title drawer-title">
+                  <span class="drawer-title__en">contact</span>
+                  <span class="drawer-title__jp">お問い合わせフォーム</span>
+                </a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="" class="header__drawer-title drawer-title">
+                  <span class="drawer-title__en">q&amp;a</span>
+                  <span class="drawer-title__jp">よくある質問</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- MV -->
+    <section class="mv js-mv">
+      <div class="mv__title-wrap">
+        <h2 class="mv__title">
+          <div class="text-container" id="text">
+            <span class="letter">あ</span><span class="letter">な</span><span class="letter">た</span><span
+              class="letter">の</span>
+            <span class="letter">民</span><span class="letter">泊</span><span class="letter">は</span><br>
+            <span class="letter">も</span><span class="letter">っ</span><span class="letter">と</span>
+            <span class="letter">ク</span><span class="letter">リ</span><span class="letter">エ</span><span
+              class="letter">イ</span><span class="letter">テ</span><span class="letter">ィ</span><span
+              class="letter">ブ</span>
+            <span class="letter">に</span><span class="letter">な</span><span class="letter">る</span>
+          </div>
+          <div class="mv__title-sp u-mobile">
+            <p class="mv__title-text">あなたの民泊を</p>
+            <p class="mv__title-text">もっと</p>
+            <p class="mv__title-text">クリエイティブに</p>
+          </div>
+        </h2>
+      </div>
+      <div class="mv__scroll-wrap">
+        <div class="mv__img slider-container">
+          <section class="mv-img">
+            <img src="./images/common/mv01.jpg" alt="">
+          </section>
+          <section class="mv-img">
+            <img src="./images/common/mv02.jpg" alt="">
+          </section>
+          <section class="mv-img">
+            <img src="./images/common/mv03.jpg" alt="">
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="mv scroll_container js-mv">
+      <div class="sticky_wrap">
+        <div class="horizontal_scroll">
+          <h2 class="mv__title ">
+            <span class="mv__title-pc u-desktop">
+              <span>あなたの民泊を</span>
+              <span>もっとクリエイティブに</span>
+            </span>
+            <span class="mv__title-sp u-mobile">
+              <span>あなたの民泊を</span>
+              <span>もっと</span>
+              <span>クリエイティブに</span>
+            </span>
+          </h2>
+          <div class="scroller nobar">
+            <section>
+              <img src="./images/common/mv01.jpg" alt="">
+            </section>
+            <section>
+              <img src="./images/common/mv02.jpg" alt="">
+            </section>
+            <section>
+              <img src="./images/common/mv03.jpg" alt="">
+            </section>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+    <!-- <div class="fv">
+        ファーストビュー
+      </div>
+      <div class="container">
+        <div class="panels-wrap">
+          <section class="panel" id="panel-01">
+            <h2>パネル01</h2>
+            <img src="./images/common/mv03.jpg" alt="">
+          </section>
+          <section class="panel" id="panel-02">
+            <h2>パネル02</h2>
+          </section>
+          <section class="panel" id="panel-03">
+            <h2>パネル03</h2>
+          </section>
+          <section class="panel" id="panel-04">
+              <h2>パネル04</h2>
+          </section>
+        </div>
+      </div> -->
+    <!-- <section class="mv horizontal_scroll js-mv">
+        <div class="sticky">
+        <h2 class="mv__title ">
+          <span class="mv__title-pc u-desktop">
+            <span>あなたの民泊を</span>
+            <span>もっとクリエイティブに</span>
+          </span>
+          <span class="mv__title-sp u-mobile">
+            <span>あなたの民泊を</span>
+            <span>もっと</span>
+            <span>クリエイティブに</span>
+          </span>
+        </h2>
+        <div class="scroller">
+          <section>
+            <img src="./images/common/mv01.jpg" alt="">
+          </section>
+          <section>
+            <img src="./images/common/mv02.jpg" alt="">
+          </section>
+          <section>
+            <img src="./images/common/mv03.jpg" alt="">
+          </section>
+        </div>
+      </div>
+      </section> -->
+    <section id="works" class="works layout-works">
+      <div class="works__inner inner">
+        <div class="works__block">
+          <div class="works__title common-title">
+            <h2 class="common-title__jp-title">制作実例</h2>
+            <p class="common-title__eng-title">works</p>
+          </div>
+        </div>
+        <div class="works__wrapper">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="works__swiper swiper js-works-swiper">
+            <ul class="swiper-wrapper works__list works-list">
+              <li class="swiper-slide works-list__item">
+                <div class="works-list__img"><img src="./images/common/works1.jpg" alt=""></div>
+                <div class="works-list__btn"><a href="" class="works-list__btn-link js-works-modal-open"
+                    data-modal="works-modal-1">詳細を見る</a></div>
+              </li>
+              <li class="swiper-slide works-list__item">
+                <div class="works-list__img"><img src="./images/common/works2.jpg" alt=""></div>
+                <div class="works-list__btn"><a href="" class="works-list__btn-link js-works-modal-open"
+                    data-modal="works-modal-2">詳細を見る</a></div>
+              </li>
+              <li class="swiper-slide works-list__item">
+                <div class="works-list__img"><img src="./images/common/works3.jpg" alt=""></div>
+                <div class="works-list__btn"><a href="" class="works-list__btn-link js-works-modal-open"
+                    data-modal="works-modal-3">詳細を見る</a></div>
+              </li>
+              <li class="swiper-slide works-list__item">
+                <div class="works-list__img"><img src="./images/common/works4.jpg" alt=""></div>
+                <div class="works-list__btn"><a href="" class="works-list__btn-link js-works-modal-open"
+                    data-modal="works-modal-4">詳細を見る</a></div>
+              </li>
+              <li class="swiper-slide works-list__item">
+                <div class="works-list__img"><img src="./images/common/works5.jpg" alt=""></div>
+                <div class="works-list__btn"><a href="" class="works-list__btn-link js-works-modal-open"
+                    data-modal="works-modal-5">詳細を見る</a></div>
+              </li>
+              <li class="swiper-slide works-list__item">
+                <div class="works-list__img"><img src="./images/common/works6.jpg" alt=""></div>
+                <div class="works-list__btn"><a href="" class="works-list__btn-link js-works-modal-open"
+                    data-modal="works-modal-6">詳細を見る</a></div>
+              </li>
+              <li class="swiper-slide works-list__item">
+                <div class="works-list__img"><img src="./images/common/works7.jpg" alt=""></div>
+                <div class="works-list__btn"><a href="" class="works-list__btn-link js-works-modal-open"
+                    data-modal="works-modal-7">詳細を見る</a></div>
+              </li>
+              <li class="swiper-slide works-list__item">
+                <div class="works-list__img"><img src="./images/common/works8.jpg" alt=""></div>
+                <div class="works-list__btn"><a href="" class="works-list__btn-link js-works-modal-open"
+                    data-modal="works-modal-8">詳細を見る</a></div>
+              </li>
+              <li class="swiper-slide works-list__item">
+                <div class="works-list__img"><img src="./images/common/works9.jpg" alt=""></div>
+                <div class="works-list__btn"><a href="" class="works-list__btn-link js-works-modal-open"
+                    data-modal="works-modal-9">詳細を見る</a></div>
+              </li>
+            </ul>
+          </div>
+          <div class="works__pagination swiper-pagination"></div>
+        </div>
+        <div class="works__list-btn">
+          <a href="" class="common-list-btn">制作実例をもっと見る</a>
+        </div>
+      </div>
+      <!-- headline -->
+      <div class="headline layout-headline">
+        <div class="headline__inner">
+          <ul class="headline__item">
+            <li class="headline__text">nice&excl;&excl;&nbsp;change&excl;&excl;&nbsp;</li>
+            <li class="headline__text">nice&excl;&excl;&nbsp;change&excl;&excl;&nbsp;</li>
+            <li class="headline__text">nice&excl;&excl;&nbsp;change&excl;&excl;&nbsp;</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- モーダル -->
+    <div class="works__wrap">
+      <div class="works__container">
+        <div id="works-modal-1" class="works-modal js-works-modal">
+          <div class="works-modal__background js-works-modal__background"></div>
+          <div class="works-modal__content">
+            <button class="works-modal__close js-works-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="works-modal__img">
+              <img src="./images/common/works-modal1.jpg" alt="制作実例画像" class="works-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="works-modal-2" class="works-modal js-works-modal">
+          <div class="works-modal__background js-works-modal__background"></div>
+          <div class="works-modal__content">
+            <button class="works-modal__close js-works-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="works-modal__img">
+              <img src="./images/common/works-modal1.jpg" alt="制作実例画像" class="works-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="works-modal-3" class="works-modal js-works-modal">
+          <div class="works-modal__background js-works-modal__background"></div>
+          <div class="works-modal__content">
+            <button class="works-modal__close js-works-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="works-modal__img">
+              <img src="./images/common/works-modal2.jpg" alt="制作実例画像" class="works-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="works-modal-4" class="works-modal js-works-modal">
+          <div class="works-modal__background js-works-modal__background"></div>
+          <div class="works-modal__content">
+            <button class="works-modal__close js-works-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="works-modal__img">
+              <img src="./images/common/works-modal3.jpg" alt="制作実例画像" class="works-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="works-modal-5" class="works-modal js-works-modal">
+          <div class="works-modal__background js-works-modal__background"></div>
+          <div class="works-modal__content">
+            <button class="works-modal__close js-works-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="works-modal__img">
+              <img src="./images/common/works-modal4.jpg" alt="制作実例画像" class="works-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="works-modal-6" class="works-modal js-works-modal">
+          <div class="works-modal__background js-works-modal__background"></div>
+          <div class="works-modal__content">
+            <button class="works-modal__close js-works-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="works-modal__img">
+              <img src="./images/common/works-modal5.jpg" alt="制作実例画像" class="works-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="works-modal-7" class="works-modal js-works-modal">
+          <div class="works-modal__background js-works-modal__background"></div>
+          <div class="works-modal__content">
+            <button class="works-modal__close js-works-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="works-modal__img">
+              <img src="./images/common/works-modal6.jpg" alt="制作実例画像" class="works-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="works-modal-8" class="works-modal js-works-modal">
+          <div class="works-modal__background js-works-modal__background"></div>
+          <div class="works-modal__content">
+            <button class="works-modal__close js-works-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="works-modal__img">
+              <img src="./images/common/works-modal7.jpg" alt="制作実例画像" class="works-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="works-modal-9" class="works-modal js-works-modal">
+          <div class="works-modal__background js-works-modal__background"></div>
+          <div class="works-modal__content">
+            <button class="works-modal__close js-works-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="works-modal__img">
+              <img src="./images/common/works-modal8.jpg" alt="制作実例画像" class="works-modal__img-content">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- worksデザイン -->
+    <div class="works__cards works-cards">
+      <div class="works-cards__inner inner">
+        <div class="works-cards__wrapper">
+          <div class="swiper js-works-cards-swiper">
+            <div class="swiper-wrapper">
+              <div class="works-cards__item swiper-slide">
+                <div class="works-card">
+                  <picture class="works-card__img1">
+                    <source srcset="./images/common/change-woman-sp.svg" media="(max-width: 768px)">
+                    <img src="./images/common/change-woman-pc.svg" alt="">
+                  </picture>
+                  <div class="works-card__content">
+                    <div class="works-card__img2">
+                      <img src="./images/common/works-graph1.jpg" alt="">
+                    </div>
+                    <div class="works-card__body">
+                      <p class="works-card__text">
+                        多くの民泊施設が立ち並ぶ中で、確実に集客し、ファンを増やし、収益を上げていくには&hellip;
+                        「人の目につくこと」「見た人に印象を残すこと」「シェアしたくなる装飾」など魅力的なアイデアはもちろん、人を振り向かせるためのデザインが重要になります。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="works-cards__item swiper-slide">
+                <div class="works-card">
+                  <picture class="works-card__img1">
+                    <source srcset="./images/common/change-men-pc.svg" media="(max-width: 768px)">
+                    <img src="./images/common/change-men-pc.svg" alt="">
+                  </picture>
+                  <div class="works-card__content">
+                    <div class="works-card__img2">
+                      <img src="./images/common/works-graph2.jpg" alt="">
+                    </div>
+                    <div class="works-card__body">
+                      <p class="works-card__text">
+                        多くの民泊施設がひしめく中で、確実に集客し、リピーターを増やし、収益を伸ばすためには.... 「目を引くこと」「記憶に残ること」「思わずシェアしたくなること」が鍵となります。
+                        印象的な装飾やデザインはもちろん、視覚的に訴求するアイデアが、人の注目を集める重要な要素になります。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- nicebase -->
+    <section id="about" class="nicebase layout-nicebase">
+      <div class="nicebase__inner inner">
+        <div class="nicebase__title common-title">
+          <h2 class="common-title__jp-title">nicebaseでできること</h2>
+          <p class="common-title__eng-title">about&nbsp;nicebase</p>
+        </div>
+        <div class="nicebase__cards nicebase-cards">
+          <div class="nicebase-cards__inner">
+            <div class="nicebase-cards__wrapper">
+              <div class="nicebase-cards__swiper swiper js-nicebase-cards-swiper">
+                <div class="swiper-wrapper">
+                  <div class="nicebase-cards__item swiper-slide">
+                    <div class="nicebase-card">
+                      <div class="nicebase-card__inner">
+                        <div class="nicebase-card__block">
+                          <div class="nicebase-card__img">
+                            <img src="./images/common/nicebase1.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="nicebase-card__body">
+                          <h3 class="nicebase-card__title">
+                            <span class="nicebase-card__title-wrap">
+                              <span class="nicebase-card__title-text">
+                                デザイン&plus;マーケティング
+                              </span>
+                            </span>
+                          </h3>
+                          <div class="nicebase-card__textarea">
+                            <p class="nicebase-card__text">
+                              デザインとマーケティングの視点を「NICE&excl;&excl;」
+                              に融合しあなたのビジネスをサポートします。
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nicebase-cards__item swiper-slide">
+                    <div class="nicebase-card">
+                      <div class="nicebase-card__inner">
+                        <div class="nicebase-card__block">
+                          <div class="nicebase-card__img">
+                            <img src="./images/common/nicebase2.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="nicebase-card__body">
+                          <h3 class="nicebase-card__title">
+                            <span class="nicebase-card__title-wrap">
+                              <span class="nicebase-card__title-text">
+                                あなたの民泊の魅力発掘&excl;
+                              </span>
+                            </span>
+                          </h3>
+                          <div class="nicebase-card__textarea">
+                            <p class="nicebase-card__text">
+                              あなただけの「NICE!!」な魅力を持った「宿泊BASE」を「デザイン」で実現します。
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nicebase-cards__item swiper-slide">
+                    <div class="nicebase-card">
+                      <div class="nicebase-card__inner">
+                        <div class="nicebase-card__block">
+                          <div class="nicebase-card__img">
+                            <img src="./images/common/nicebase3.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="nicebase-card__body">
+                          <h3 class="nicebase-card__title">
+                            <span class="nicebase-card__title-wrap">
+                              <span class="nicebase-card__title-text">
+                                映えるアイデアを提供&excl;
+                              </span>
+                            </span>
+                          </h3>
+                          <div class="nicebase-card__textarea">
+                            <p class="nicebase-card__text">
+                              低コストでも映える、BASE作りの「NICE!!」なアイデアを提供できます！
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ability -->
+    <section id="ability" class="ability layout-ability">
+      <div class="ability__inner inner">
+        <div class="ability__title common-title">
+          <h2 class="common-title__jp-title">nicebaseの技術力</h2>
+          <p class="common-title__eng-title">ability</p>
+        </div>
+        <div class="ability__cards ability-cards">
+          <div class="ability-cards__item">
+            <div class="ability-card">
+              <div class="ability-card__block">
+                <div class="ability-card__pc-number u-desktop">
+                  <span class="pc-number">01</span>
+                </div>
+                <div class="ability-card__inner">
+                  <div class="ability-card__contents">
+                    <h3 class="ability-card__title">
+                      <span class="ability-card__sp-number u-mobile">01</span>
+                      <span class="ability-card__animation">nice</span>なデザイン提案
+                    </h3>
+                    <div class="ability-card__content">
+                      <div class="ability-card__img">
+                        <img src="./images/common/ability1.jpg" alt="">
+                      </div>
+                      <div class="ability-card__body">
+                        <p class="ability-card__text">
+                          ターゲットに響く、魅力的なデザインをご提案。和モダン、レトロ、ミニマルなど、コンセプトに沿った空間づくりで、競争力の
+                          ある民泊を実現します。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ability-cards__item">
+            <div class="ability-card">
+              <div class="ability-card__block">
+                <div class="ability-card__pc-number u-desktop">
+                  <span class="pc-number">02</span>
+                </div>
+                <div class="ability-card__inner">
+                  <div class="ability-card__contents">
+                    <h3 class="ability-card__title">
+                      <span class="ability-card__sp-number u-mobile">02</span>
+                      <span class="ability-card__animation">nice</span>な品質管理
+                    </h3>
+                    <div class="ability-card__content">
+                      <div class="ability-card__img">
+                        <img src="./images/common/ability2.jpg" alt="">
+                      </div>
+                      <div class="ability-card__body">
+                        <p class="ability-card__text">
+                          見た目だけでなく、機能性や耐久性も重視。
+                          プロの職人技と最新技術を駆使し、美しく、使いやすく、長く愛される空間を提供します。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ability-cards__item">
+            <div class="ability-card">
+              <div class="ability-card__block">
+                <div class="ability-card__pc-number u-desktop">
+                  <span class="pc-number">03</span>
+                </div>
+                <div class="ability-card__inner">
+                  <div class="ability-card__contents">
+                    <h3 class="ability-card__title">
+                      <span class="ability-card__sp-number u-mobile">03</span>
+                      <span class="ability-card__animation">nice</span>な設備環境
+                    </h3>
+                    <div class="ability-card__content">
+                      <div class="ability-card__img">
+                        <img src="./images/common/ability3.jpg" alt="">
+                      </div>
+                      <div class="ability-card__body">
+                        <p class="ability-card__text">
+                          快適な宿泊体験には、設備環境の整備も不可欠。照明・家具・サイン・ディスプレイなど、一貫したデザインで統一感のある空間
+                          を創り上げます。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- expert -->
+    <section id="expert" class="expert">
+      <div class="expert__inner inner">
+        <div class="expert__title common-title">
+          <h2 class="common-title__jp-title common-title__jp-title--expert">nicebaseを支えるメンバー</h2>
+          <p class="common-title__eng-title common-title__eng-title--expert">expert</p>
+        </div>
+        <div class="expert__cards expert-cards">
+          <div class="expert-cards__inner">
+            <div class="expert-cards__wrapper">
+              <div class="expert-cards__swiper swiper js-expert-cards-swiper">
+                <div class="swiper-wrapper">
+                  <div class="expert-cards__item swiper-slide">
+                    <div class="expert-card">
+                      <div class="expert-card__inner">
+                        <div class="expert-card__content">
+                          <div class="expert-card__block">
+                            <div class="expert-card__img">
+                              <img src="./images/common/expert1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="expert-card__body">
+                            <h3 class="expert-card__title">民泊アドバイザー</h3>
+                            <div class="expert-card__textarea">
+                              <p class="expert-card__text">
+                                空間やブランディングを通じて、魅力的な宿泊体験を創出する専門家。ターゲットに合わせた内容や
+                                装飾の提案、集客力向上の戦略をサポートし、唯一無地二の民泊作りを実現します。
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="expert-cards__item swiper-slide">
+                    <div class="expert-card">
+                      <div class="expert-card__inner">
+                        <!-- <div class="expert-card__comment">
+                        <span>魅力的な民泊は<br>
+                          装飾品で決まります！</span>
+                      </div> -->
+                        <div class="expert-card__content">
+                          <div class="expert-card__block">
+                            <div class="expert-card__img">
+                              <img src="./images/common/expert2.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="expert-card__body">
+                            <h3 class="expert-card__title">染物職人</h3>
+                            <div class="expert-card__textarea">
+                              <p class="expert-card__text">
+                                伝統技術を生かしつつ、ニーズに応える技を磨き続けるエキスパート。唯一無二の色や模様を生み出
+                                し、民泊の空間に個性と温もりを。宿泊体験をより特別なものにする職人技の魅力をお届けします。
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="expert-cards__item swiper-slide">
+                    <div class="expert-card">
+                      <div class="expert-card__inner">
+                        <div class="expert-card__content">
+                          <div class="expert-card__block">
+                            <div class="expert-card__img">
+                              <img src="./images/common/expert3.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="expert-card__body">
+                            <h3 class="expert-card__title">サインクリエイター</h3>
+                            <div class="expert-card__textarea">
+                              <p class="expert-card__text">
+                                宿の個性やコンセプトを表現し、視認性とデザイン性を兼ね備えた看板をご提供する専門家。
+                                外観の印象を高め、ゲストの誘導やブランディングをサポートし、魅力的な宿泊体験をサポート
+                                いたします。
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="expert-cards__item swiper-slide">
+                    <div class="expert-card">
+                      <div class="expert-card__inner">
+                        <div class="expert-card__content">
+                          <div class="expert-card__block">
+                            <div class="expert-card__img">
+                              <img src="./images/common/expert4.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="expert-card__body">
+                            <h3 class="expert-card__title">デザイナー</h3>
+                            <div class="expert-card__textarea">
+                              <p class="expert-card__text">
+                                宿泊施設のデザインは、ただの装飾ではなく、ゲストの感動体験を彩る重要な要素です。 私たちは、ターゲットやブランドコンセプトに合わせた、
+                                最適なビジュアルデザインをオーダーメイドで提案します。
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE -->
+    <section id="service" class="service layout-service">
+      <div class="service__inner inner">
+        <div class="service__title common-title">
+          <h2 class="common-title__jp-title">サービス内容</h2>
+          <p class="common-title__eng-title">service</p>
+        </div>
+        <div class="service__cards service-cards">
+          <div class="service-cards__item">
+            <div class="service-card">
+              <div class="service-card__img1">
+                <img src="./images/common/service2.svg" alt="赤いキャップを被った女性のキャラクター">
+              </div>
+              <div class="service-card__content">
+                <div class="service-card__img2">
+                  <img src="./images/common/service1.svg" alt="ロゴ">
+                </div>
+                <div class="service-card__body">
+                  <h3 class="service-card__title">
+                    <span class="service-card__title-wrap">
+                      <span class="service-card__title-text">
+                        ロゴ・ブランディングデザイン
+                      </span>
+                    </span>
+                  </h3>
+                  <p class="service-card__text">
+                    ロゴはお客様に伝わる大切な要素。ターゲット層に合わせたブランディングで、民泊の魅力を最大限に引き出します。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service-cards__item">
+            <div class="service-card">
+              <div class="service-card__img1">
+                <img src="./images/common/service3.svg" alt="">
+              </div>
+              <div class="service-card__content">
+                <div class="service-card__img2 service-card__img2--reverse">
+                  <img src="./images/common/service2.jpg" alt="">
+                </div>
+                <div class="service-card__body">
+                  <h3 class="service-card__title">
+                    <span class="service-card__title-wrap">
+                      <span class="service-card__title-text">
+                        外観・ファサードデザイン
+                      </span>
+                    </span>
+                  </h3>
+                  <p class="service-card__text">
+                    訪れた瞬間に「泊まってみたい！」と思わせる外観デザインを提供。和風、モダン、リゾート風
+                    など、コンセプトに合わせた提案が可能です。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service-cards__item">
+            <div class="service-card">
+              <div class="service-card__img1">
+                <img src="./images/common/service4.svg" alt="緑色のニット帽を被った女性のキャラクター">
+              </div>
+              <div class="service-card__content">
+                <div class="service-card__img2">
+                  <img src="./images/common/service3.jpg" alt="壁紙が鮮やかな和室">
+                </div>
+                <div class="service-card__body">
+                  <h3 class="service-card__title">
+                    <span class="service-card__title-wrap">
+                      <span class="service-card__title-text">
+                        内観・インテリアデザイン
+                      </span>
+                    </span>
+                  </h3>
+                  <p class="service-card__text">
+                    室内のデザインは、宿泊体験の満足度を左右します。壁紙や照明、インテリアの細部にこだわり
+                    滞在を特別なものに。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service-cards__item">
+            <div class="service-card">
+              <div class="service-card__img1">
+                <img src="./images/common/mens-character.svg" alt="サングラスを掛けた男性のキャラクター">
+              </div>
+              <div class="service-card__content">
+                <div class="service-card__img2 service-card__img2--reverse">
+                  <img src="./images/common/service4.jpg" alt="ノートパソコンを操作している様子">
+                </div>
+                <div class="service-card__body">
+                  <h3 class="service-card__title">
+                    <span class="service-card__title-wrap">
+                      <span class="service-card__title-text">
+                        SNS広告バナー・LP制作
+                      </span>
+                    </span>
+                  </h3>
+                  <p class="service-card__text">
+                    民泊の収益を上げるためにはWEB上での認知もかなり重要&excl;
+                    統一感のあるデザインで、SNSマーケ広告からLP制作まで一手に担います。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ITEM -->
+    <section id="item" class="item">
+      <div class="item__inner inner">
+        <div class="item__title common-title">
+          <h2 class="common-title__jp-title">アイテム一覧</h2>
+          <p class="common-title__eng-title">item</p>
+        </div>
+        <div class="p-sub-gallery__wrap">
+          <div class="p-sub-gallery__modal js-modal" id="gallery-modal">
+            <div class="p-sub-gallery__modal-body">
+              <div class="p-sub-gallery__modal-img">
+              </div>
+            </div>
+          </div>
+          <div class="p-sub-gallery__items">
+            <div class="p-sub-gallery__item js-modal-open">
+              <picture class="p-sub-gallery__img">
+                <source srcset="./images/common/Item1.jpg" media="(max-width: 768px)">
+                <img src="./images/common/Item1.jpg" alt="ギャラリー画像1">
+              </picture>
+              <p class="p-sub-gallery__text">和テイストの民泊</p>
+            </div>
+            <div class="p-sub-gallery__item js-modal-open">
+              <picture class="p-sub-gallery__img">
+                <source srcset="./images/common/Item1.jpg" media="(max-width: 768px)">
+                <img src="./images/common/Item2.jpg" alt="ギャラリー画像2">
+              </picture>
+            </div>
+            <div class="p-sub-gallery__item js-modal-open">
+              <picture class="p-sub-gallery__img">
+                <source srcset="./images/common/Item1.jpg" media="(max-width: 768px)">
+                <img src="./images/common/Item1.jpg" alt="ギャラリー画像3">
+              </picture>
+            </div>
+            <div class="p-sub-gallery__item js-modal-open">
+              <picture class="p-sub-gallery__img">
+                <source srcset="./images/common/Item1.jpg" media="(max-width: 768px)">
+                <img src="./images/common/Item3.jpg" alt="ギャラリー画像4">
+              </picture>
+            </div>
+            <div class="p-sub-gallery__item js-modal-open">
+              <picture class="p-sub-gallery__img">
+                <source srcset="./images/common/Item1.jpg" media="(max-width: 768px)">
+                <img src="./images/common/Item4.jpg" alt="ギャラリー画像5">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- モーダル -->
+    <!-- <div class="item__wrap">
+      <div class="item__container">
+        <div id="item-modal-1" class="item-modal js-item-modal">
+          <div class="item-modal__background js-item-modal__background"></div>
+          <div class="item-modal__content">
+            <button class="item-modal__close js-item-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="item-modal__img">
+              <img src="./images/common/item-modal1.jpg" alt="制作実例画像" class="item-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="item-modal-2" class="item-modal js-item-modal">
+          <div class="works-modal__background js-works-modal__background"></div>
+          <div class="works-modal__content">
+            <button class="works-modal__close js-works-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="works-modal__img">
+              <img src="./images/common/works-modal1.jpg" alt="制作実例画像" class="works-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="works-modal-3" class="item-modal js-item-modal">
+          <div class="item-modal__background js-item-modal__background"></div>
+          <div class="item-modal__content">
+            <button class="item-modal__close js-item-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="item-modal__img">
+              <img src="./images/common/item-modal2.jpg" alt="制作実例画像" class="item-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="item-modal-4" class="item-modal js-item-modal">
+          <div class="item-modal__background js-item-modal__background"></div>
+          <div class="item-modal__content">
+            <button class="item-modal__close js-item-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="item-modal__img">
+              <img src="./images/common/item-modal3.jpg" alt="制作実例画像" class="item-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="item-modal-5" class="item-modal js-item-modal">
+          <div class="item-modal__background js-item-modal__background"></div>
+          <div class="item-modal__content">
+            <button class="item-modal__close js-item-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="item-modal__img">
+              <img src="./images/common/item-modal4.jpg" alt="制作実例画像" class="item-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="item-modal-6" class="item-modal js-item-modal">
+          <div class="item-modal__background js-item-modal__background"></div>
+          <div class="item-modal__content">
+            <button class="item-modal__close js-item-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="item-modal__img">
+              <img src="./images/common/item-modal5.jpg" alt="制作実例画像" class="item-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="item-modal-7" class="item-modal js-item-modal">
+          <div class="item-modal__background js-item-modal__background"></div>
+          <div class="item-modal__content">
+            <button class="item-modal__close js-item-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="item-modal__img">
+              <img src="./images/common/item-modal6.jpg" alt="制作実例画像" class="item-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="item-modal-8" class="item-modal js-item-modal">
+          <div class="item-modal__background js-item-modal__background"></div>
+          <div class="item-modal__content">
+            <button class="item-modal__close js-item-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="item-modal__img">
+              <img src="./images/common/item-modal7.jpg" alt="制作実例画像" class="item-modal__img-content">
+            </div>
+          </div>
+        </div>
+        <div id="item-modal-9" class="item-modal js-item-modal">
+          <div class="item-modal__background js-item-modal__background"></div>
+          <div class="item-modal__content">
+            <button class="item-modal__close js-item-modal__close">
+              <img src="./images/common/modal-close-btn.svg" alt="閉じる">
+            </button>
+            <div class="item-modal__img">
+              <img src="./images/common/item-modal8.jpg" alt="制作実例画像" class="item-modal__img-content">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- flow -->
+    <section id="flow" class="flow layout-flow">
+      <div class="flow__inner inner">
+        <div class="flow__title common-title">
+          <h2 class="common-title__jp-title">ご注文の流れ</h2>
+          <p class="common-title__eng-title">flow</p>
+        </div>
+        <div class="flow__cards flow-cards">
+          <div class="flow-cards__inner">
+            <div class="flow-cards__wrapper">
+              <div class="flow-cards__swiper swiper js-flow-cards-swiper">
+                <div class="swiper-wrapper">
+                  <div class="flow-cards__item swiper-slide">
+                    <div class="flow-card">
+                      <div class="flow-card__inner">
+                        <div class="flow-card__block">
+                          <div class="flow-card__img">
+                            <img src="./images/common/flow1.jpg" alt="">
+                          </div>
+                          <h3 class="flow-card__title">お問い合わせ</h3>
+                        </div>
+                        <div class="flow-card__body">
+                          <p class="flow-card__text">
+                            まずは、お問い合わせフォームもしくはお電話にてご連絡ください。
+                            ご希望の内容や用途について簡単にお聞かせください。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="flow-cards__arrow">></div> -->
+                    <div class="flow-cards__arrow">
+                      <img src="./images/common/flow-arrow.svg" alt="矢印">
+                    </div>
+                  </div>
+
+                  <!-- 三角の矢印 -->
+
+                  <div class="flow-cards__item swiper-slide">
+                    <div class="flow-card">
+                      <div class="flow-card__inner">
+                        <div class="flow-card__block">
+                          <div class="flow-card__img">
+                            <img src="./images/common/flow2.jpg" alt="">
+                          </div>
+                          <h3 class="flow-card__title">ヒアリング</h3>
+                        </div>
+                        <div class="flow-card__body">
+                          <p class="flow-card__text">
+                            担当者が詳しくヒアリングを行い、ご希望のデザインやサイズ、
+                            設置場所、納期などについてお伺いします。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flow-cards__arrow">
+                      <img src="./images/common/flow-arrow.svg" alt="矢印">
+                    </div>
+                  </div>
+                  <div class="flow-cards__item swiper-slide">
+                    <div class="flow-card">
+                      <div class="flow-card__inner">
+                        <div class="flow-card__block">
+                          <div class="flow-card__img">
+                            <img src="./images/common/flow3.jpg" alt="">
+                          </div>
+                          <h3 class="flow-card__title">お見積り</h3>
+                        </div>
+                        <div class="flow-card__body">
+                          <p class="flow-card__text">
+                            まずは、お問い合わせフォームもしくはお電話にてご連絡ください。
+                            ご希望の内容や用途について簡単にお聞かせください。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flow-cards__arrow">
+                      <img src="./images/common/flow-arrow.svg" alt="矢印">
+                    </div>
+                  </div>
+                  <div class="flow-cards__item swiper-slide">
+                    <div class="flow-card">
+                      <div class="flow-card__inner">
+                        <div class="flow-card__block">
+                          <div class="flow-card__img">
+                            <img src="./images/common/flow4.jpg" alt="">
+                          </div>
+                          <h3 class="flow-card__title">デザイン制作</h3>
+                        </div>
+                        <div class="flow-card__body">
+                          <p class="flow-card__text">
+                            担当者が詳しくヒアリングを行い、ご希望のデザインやサイズ、
+                            設置場所、納期などについてお伺いします。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flow-cards__arrow">
+                      <img src="./images/common/flow-arrow.svg" alt="矢印">
+                    </div>
+                  </div>
+                  <div class="flow-cards__item swiper-slide">
+                    <div class="flow-card">
+                      <div class="flow-card__inner">
+                        <div class="flow-card__block">
+                          <div class="flow-card__img">
+                            <img src="./images/common/flow5.jpg" alt="">
+                          </div>
+                          <h3 class="flow-card__title">納品</h3>
+                        </div>
+                        <div class="flow-card__body">
+                          <p class="flow-card__text">
+                            担当者が詳しくヒアリングを行い、ご希望のデザインやサイズ、
+                            設置場所、納期などについてお伺いします。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flow-cards__arrow u-mobile">
+                      <img src="./images/common/flow-arrow.svg" alt="矢印">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+
+    <div id="contact" class="contact">
+      <div class="contact__top">
+        <div class="contact__top-img">
+          <img src="./images/common/contact-top-bg.svg" alt="">
+        </div>
+        <p class="contact__top-text">
+          あなたの<br class="u-mobile">「<span class="contact__top-blue">やりたい</span>」を<br class="u-mobile">
+          お聞かせください&excl;</p>
+      </div>
+      <div class="contact__inner inner">
+        <div class="contact__logo">
+          <img src="./images/common/contact-bg-sp.svg" alt="お問い合わせ">
+        </div>
+        <div class="contact__title common-title">
+          <h2 class="common-title__jp-title">お問い合わせフォーム</h2>
+          <p class="common-title__eng-title">contact</p>
+        </div>
+        <form class="contact__form contact-form" action="データの送信先" method="post">
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <div class="contact-form__label-body">
+                <p class="contact-form__label-text">お名前<span class="contact-form__label-required">必須</span></p>
+                <!-- <p class="contact-form__label-subtext">個人の場合は氏名を入力してください</p> -->
+              </div>
+            </dt>
+            <dd class="contact-form__input">
+              <input class="contact-form__input-text" type="text" name="name" value="" placeholder="例）山田&emsp;太郎"
+                required autocomplete="name">
+            </dd>
+
+          </dl>
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <div class="contact-form__label-body">
+                <p class="contact-form__label-text">会社名</p>
+                <!-- <p class="contact-form__label-subtext">個人の場合は「個人」と入力してください</p> -->
+              </div>
+            </dt>
+            <dd class="contact-form__input">
+              <input class="contact-form__input-text" type="text" name="company" value="" placeholder="例）株式会社ABC"
+                required autocomplete="organization">
+            </dd>
+          </dl>
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <p class="contact-form__label-text">メールアドレス<span class="contact-form__label-required">必須</span></p>
+            </dt>
+            <dd class="contact-form__input">
+              <input class="contact-form__email-input" type="email" name="email" value=""
+                placeholder="例）abcdefghijk@〇〇.co.jp" required autocomplete="email">
+            </dd>
+          </dl>
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <p class="contact-form__label-text">メールアドレス(確認用)<span class="contact-form__label-required">必須</span></p>
+            </dt>
+            <dd class="contact-form__input">
+              <input class="contact-form__email-input" type="email" name="email" value=""
+                placeholder="例）abcdefghijk@〇〇.co.jp" required autocomplete="email">
+            </dd>
+          </dl>
+
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <p class="contact-form__label-text">電話番号<span class="contact-form__label-required">必須</span></p>
+            </dt>
+            <dd class="contact-form__input">
+              <input class="contact-form__tel-input" type="tel" name="tel" value="" placeholder="例）000-0000-0000"
+                required autocomplete="tel">
+            </dd>
+          </dl>
+          <!-- 郵便番号 -->
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <p class="contact-form__label-text">郵便番号<span class="contact-form__label-required">必須</span></p>
+            </dt>
+            <dd class="contact-form__input contact-form__input--zipcode">
+              <input class="contact-form__zipcode-input" type="text" name="postal_code" id="postal_code"
+                placeholder="例）123-4567" required autocomplete="postal-code">
+              <button type="button" class="contact-form__search-btn" id="search_address">住所検索</button>
+            </dd>
+          </dl>
+
+          <!-- 住所 -->
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <p class="contact-form__label-text">住所<span class="contact-form__label-required">必須</span></p>
+            </dt>
+            <dd class="contact-form__input">
+              <input class="contact-form__address-input" type="text" name="address" placeholder="例）北海道札幌市〇〇1-2-3"
+                required autocomplete="street-address">
+            </dd>
+          </dl>
+          <!-- ご希望の内容（ラジオボタン） -->
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <p class="contact-form__label-text">ご希望の内容を選択<span class="contact-form__label-required">必須</span></p>
+            </dt>
+            <dd class="contact-form__radio">
+
+              <label><input type="radio" name="request_type" value="お見積り依頼" required><span>お見積り依頼</span></label>
+              <label><input type="radio" name="request_type" value="ご質問・ご相談" required><span>ご質問・ご相談</span></label>
+              <label><input type="radio" name="request_type" value="その他" required><span>その他</span></label>
+
+            </dd>
+          </dl>
+          <!-- ご希望の内容（ラジオボタン） -->
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <p class="contact-form__label-text">ご利用のシーン</p>
+            </dt>
+            <dd class="contact-form__radio">
+              <label><input type="radio" name="request_type" value="民泊施設で利用" required><span>民泊施設で利用</span></label>
+              <label><input type="radio" name="request_type" value="店舗、その他の施設で利用"
+                  required><span>店舗、その他の施設で利用</span></label>
+              <label><input type="radio" name="request_type" value="個人利用" required><span>個人利用</span></label>
+            </dd>
+          </dl>
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <p class="contact-form__label-text">お問い合わせ内容</p>
+            </dt>
+            <dd class="contact-form__input">
+              <textarea class="contact-form__input-textarea" name="message" placeholder="何でもご自由にご記載ください。
+  お見積りご希望の方は、商品のサイズや内容など、なるべく具体的にご記入ください。
+  施設のHPなどがございます場合はこちらにURLをご記載ください。" required></textarea>
+            </dd>
+          </dl>
+          <!-- 資料データの添付（ファイルアップロード） -->
+          <dl class="contact-form__content">
+            <dt class="contact-form__label">
+              <p class="contact-form__label-text">資料データの添付</p>
+            </dt>
+            <dd class="contact-form__input">
+              <label for="attachment" class="contact-form__file-label">添付する</label>
+              <input type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.png">
+              <span class="contact-form__file-note">※4MBまで</span>
+            </dd>
+          </dl>
+          <div class="contact-form__check">
+            <p class="contact-form__check-text"><a href="">個人情報のお取り扱い</a>について同意した上で送信ください</p>
+          </div>
+          <div class="contact-form__btn-wrapper">
+            <div class="contact-form__btn">
+              <input type="submit" class="contact-btn" name="send" value="お問い合わせ内容を確認">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- faq -->
+    <section id="q&a" class="faq layout-faq">
+      <div class="faq__inner inner">
+        <div class="faq__title-wrap">
+          <div class="faq__title common-title">
+            <h2 class="common-title__jp-title">よくある質問</h2>
+            <p class="common-title__eng-title">q&amp;a</p>
+          </div>
+          <div class="faq__img">
+            <img src="./images/common/mens-character.svg" alt="男性のキャラクター">
+          </div>
+        </div>
+        <div class="faq__list faq-question-list">
+          <div class="faq-question-list__inner">
+            <ul class="faq-question-list__items">
+              <li class="faq-question-list__item js-faq-accordion-item">
+                <div class="faq-question">
+                  <div class="faq-question__block js-faq-accordion-title">
+                    <div class="faq-question__body">
+                      <div class="faq-question__question-img">
+                        <img src="./images/common/faq-question.svg" alt="">
+                      </div>
+                      <h3 class="faq-question__title">看板や暖策のデザインはオーダーメイド可能ですか？</h3>
+                    </div>
+                    <span class="faq-question__icon"></span>
+                  </div>
+
+                  <div class="faq-question__content js-faq-accordion-content">
+                    <div class="faq-question__content-block">
+                      <div class="faq-question__answer-img">
+                        <img src="./images/common/faq-answer.svg" alt="アンサーアイコン">
+                      </div>
+                      <p class="faq-question__text">はい、完全オーダーメイドで制作可能です。お客様のご要望に合わせて、デザイン、サイズ、素材を自由にカスタマイズできます。</p>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="faq-question-list__item js-faq-accordion-item">
+                <div class="faq-question">
+                  <div class="faq-question__block js-faq-accordion-title">
+                    <div class="faq-question__body">
+                      <div class="faq-question__question-img">
+                        <img src="./images/common/faq-question.svg" alt="">
+                      </div>
+                      <h3 class="faq-question__title">デザイン修正には追加費用がかかりますか？</h3>
+                    </div>
+                    <span class="faq-question__icon"></span>
+                  </div>
+
+                  <div class="faq-question__content js-faq-accordion-content">
+                    <div class="faq-question__content-block">
+                      <div class="faq-question__answer-img">
+                        <img src="./images/common/faq-answer.svg" alt="アンサーアイコン">
+                        <!-- </div> -->
+                      </div>
+                      <p class="faq-question__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="faq-question-list__item js-faq-accordion-item">
+                <div class="faq-question">
+                  <div class="faq-question__block js-faq-accordion-title">
+                    <div class="faq-question__body">
+                      <div class="faq-question__question-img">
+                        <img src="./images/common/faq-question.svg" alt="">
+                      </div>
+                      <h3 class="faq-question__title">支払い方法はどのようなものがありますか？</h3>
+                    </div>
+                    <span class="faq-question__icon"></span>
+                  </div>
+                  <div class="faq-question__content js-faq-accordion-content">
+                    <div class="faq-question__content-block">
+                      <div class="faq-question__answer-img">
+                        <img src="./images/common/faq-answer.svg" alt="アンサーアイコン">
+                        <!-- </div> -->
+                      </div>
+                      <p class="faq-question__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="faq-question-list__item js-faq-accordion-item">
+                <div class="faq-question">
+                  <div class="faq-question__block js-faq-accordion-title">
+                    <div class="faq-question__body">
+                      <div class="faq-question__question-img">
+                        <img src="./images/common/faq-question.svg" alt="">
+                      </div>
+                      <h3 class="faq-question__title">インバウンド向けに多言語表記は対応していますか？</h3>
+                    </div>
+                    <span class="faq-question__icon"></span>
+                  </div>
+
+                  <div class="faq-question__content js-faq-accordion-content">
+                    <div class="faq-question__content-block">
+                      <div class="faq-question__answer-img">
+                        <img src="./images/common/faq-answer.svg" alt="アンサーアイコン">
+                        <!-- </div> -->
+                      </div>
+                      <p class="faq-question__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="faq-question-list__item js-faq-accordion-item">
+                <div class="faq-question">
+                  <div class="faq-question__block js-faq-accordion-title">
+                    <div class="faq-question__body">
+                      <div class="faq-question__question-img">
+                        <img src="./images/common/faq-question.svg" alt="">
+                      </div>
+                      <h3 class="faq-question__title">防水や耐久性のある素材は選べますか？</h3>
+                    </div>
+                    <span class="faq-question__icon"></span>
+                  </div>
+
+                  <div class="faq-question__content js-faq-accordion-content">
+                    <div class="faq-question__content-block">
+                      <div class="faq-question__answer-img">
+                        <img src="./images/common/faq-answer.svg" alt="アンサーアイコン">
+                        <!-- </div> -->
+                      </div>
+                      <p class="faq-question__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="faq-question-list__btn common-list-btn common-list-btn--faq js-load-more-faq">よくある質問をもっと見る</div>
+            <!-- 追加リスト -->
+            <ul class="faq-question-list__items faq-question-list__items--hidden">
+              <li class="faq-question-list__item js-faq-accordion-item">
+                <div class="faq-question">
+                  <div class="faq-question__block js-faq-accordion-title">
+                    <div class="faq-question__body">
+                      <div class="faq-question__question-img">
+                        <img src="./images/common/faq-question.svg" alt="">
+                      </div>
+                      <h3 class="faq-question__title">追加の質問1</h3>
+                    </div>
+                    <span class="faq-question__icon"></span>
+                  </div>
+
+                  <div class="faq-question__content js-faq-accordion-content">
+                    <div class="faq-question__content-block">
+                      <div class="faq-question__answer-img">
+                        <img src="./images/common/faq-answer.svg" alt="アンサーアイコン">
+                      </div>
+                      <p class="faq-question__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="faq-question-list__item js-faq-accordion-item">
+                <div class="faq-question">
+                  <div class="faq-question__block js-faq-accordion-title">
+                    <div class="faq-question__body">
+                      <div class="faq-question__question-img">
+                        <img src="./images/common/faq-question.svg" alt="">
+                      </div>
+                      <h3 class="faq-question__title">追加の質問2</h3>
+                    </div>
+                    <span class="faq-question__icon"></span>
+                  </div>
+
+                  <div class="faq-question__content js-faq-accordion-content">
+                    <div class="faq-question__content-block">
+                      <div class="faq-question__answer-img">
+                        <img src="./images/common/faq-answer.svg" alt="アンサーアイコン">
+                        <!-- </div> -->
+                      </div>
+                      <p class="faq-question__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="faq-question-list__item js-faq-accordion-item">
+                <div class="faq-question">
+                  <div class="faq-question__block js-faq-accordion-title">
+                    <div class="faq-question__body">
+                      <div class="faq-question__question-img">
+                        <img src="./images/common/faq-question.svg" alt="">
+                      </div>
+                      <h3 class="faq-question__title">追加の質問3</h3>
+                    </div>
+                    <span class="faq-question__icon"></span>
+                  </div>
+                  <div class="faq-question__content js-faq-accordion-content">
+                    <div class="faq-question__content-block">
+                      <div class="faq-question__answer-img">
+                        <img src="./images/common/faq-answer.svg" alt="アンサーアイコン">
+                        <!-- </div> -->
+                      </div>
+                      <p class="faq-question__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="faq-question-list__item js-faq-accordion-item">
+                <div class="faq-question">
+                  <div class="faq-question__block js-faq-accordion-title">
+                    <div class="faq-question__body">
+                      <div class="faq-question__question-img">
+                        <img src="./images/common/faq-question.svg" alt="">
+                      </div>
+                      <h3 class="faq-question__title">追加の質問4</h3>
+                    </div>
+                    <span class="faq-question__icon"></span>
+                  </div>
+
+                  <div class="faq-question__content js-faq-accordion-content">
+                    <div class="faq-question__content-block">
+                      <div class="faq-question__answer-img">
+                        <img src="./images/common/faq-answer.svg" alt="アンサーアイコン">
+                        <!-- </div> -->
+                      </div>
+                      <p class="faq-question__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="faq-question-list__item js-faq-accordion-item">
+                <div class="faq-question">
+                  <div class="faq-question__block js-faq-accordion-title">
+                    <div class="faq-question__body">
+                      <div class="faq-question__question-img">
+                        <img src="./images/common/faq-question.svg" alt="">
+                      </div>
+                      <h3 class="faq-question__title">追加の質問5</h3>
+                    </div>
+                    <span class="faq-question__icon"></span>
+                  </div>
+
+                  <div class="faq-question__content js-faq-accordion-content">
+                    <div class="faq-question__content-block">
+                      <div class="faq-question__answer-img">
+                        <img src="./images/common/faq-answer.svg" alt="アンサーアイコン">
+                        <!-- </div> -->
+                      </div>
+                      <p class="faq-question__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- company -->
+    <section class="company layout-company">
+      <a href="">
+        <div class="company__inner">
+          <div class="company__title common-title">
+            <h2 class="common-title__jp-title common-title__jp-title--company">会社概要</h2>
+            <p class="common-title__eng-title common-title__eng-title--company">company</p>
+          </div>
+        </div>
+      </a>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer class="footer js-footer">
+    <div class="footer__inner inner">
+      <div class="footer__wrap">
+        <div class="footer__logo">
+          <a href="#">
+            <img src="./images/common/footer-logo.svg" alt="ミンパクデザイン">
+          </a>
+        </div>
+        <div class="footer__content">
+          <div class="footer__btn">
+            <a href="#contact" class="footer__btn-link">お問い合わせはこちら</a>
+          </div>
+          <div class="footer__block">
+            <nav class="footer__nav footer-nav">
+              <ul class="footer-nav__items">
+                <li class="footer-nav__item-wrap">
+                  <div class="footer-nav__item">
+                    <ul class="footer-nav__sub-items">
+                      <li class="footer-nav__sub-item"><a href="#works" class="footer-nav__sub-link">works</a></li>
+                      <li class="footer-nav__sub-item"><a href="#about"
+                          class="footer-nav__sub-link">about&nbsp;nicebase</a></li>
+                      <li class="footer-nav__sub-item"><a href="#ability" class="footer-nav__sub-link">ability</a></li>
+                      <li class="footer-nav__sub-item"><a href="#expert" class="footer-nav__sub-link">expert</a></li>
+                      <li class="footer-nav__sub-item"><a href="#service" class="footer-nav__sub-link">service</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="footer-nav__item-wrap">
+                  <div class="footer-nav__item">
+                    <ul class="footer-nav__sub-items">
+                      <li class="footer-nav__sub-item"><a href="#item" class="footer-nav__sub-link">item</a></li>
+                      <li class="footer-nav__sub-item"><a href="#flow" class="footer-nav__sub-link">flow</a></li>
+                      <li class="footer-nav__sub-item"><a href="#contact" class="footer-nav__sub-link">contact</a></li>
+                      <li class="footer-nav__sub-item"><a href="#q&a" class="footer-nav__sub-link">q&amp;a</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <small class="footer__copyright-text">
+          &copy;&nbsp;2025&nbsp;<span
+            class="footer__copyright-uppercase">minpakudesign&nbsp;nicebase</span>&nbsp;all&nbsp;rights&nbsp;reserved.</small>
+      </div>
+    </div>
+  </footer>
+  <!-- トップに戻るボタン -->
+  <div class="page-top js-page-top">
+  </div>
+</body>
+
+</html>

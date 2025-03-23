@@ -1,0 +1,97 @@
+@use "global" as *;
+
+// .works-list {
+//     display: flex; // Swiperのスライドを正常に動作させるためにflexに変更
+//     align-items: center;
+// }
+
+.works-list__item {
+    position: relative;
+
+    @include mq("md") {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.works-list__img {
+    position: relative;
+    aspect-ratio: 335/219;
+    overflow: hidden;
+    border-radius: rem(5);
+    @include mq("md") {
+        aspect-ratio: 483/316;
+    }
+}
+
+.works-list__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.works-list__btn {
+    position: absolute;
+    top: 76.7123%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq("md") {
+        position: initial;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        margin-top: rem(32);
+        text-align: center;
+    }
+}
+
+.works-list__btn-link {
+    display: inline-block;
+    background-color: $black;
+    font-size: rem(16);
+    font-weight: $black1;
+    line-height: 1;
+    color: $white;
+    min-width: rem(210);
+    padding: rem(10.5) rem(13);
+    border-radius: rem(20);
+    text-align: center;
+    transition: .3s ease;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    @include mq("md") {
+        min-width: rem(333);
+        font-size: rem(20);
+        padding: rem(16.5);
+        border-radius: rem(26.5);
+    }
+}
+
+// ホバーエフェクトの背景
+.works-list__btn-link::after {
+    background: $blue1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: 0.3s ease;
+    z-index: -1;
+}
+
+// ホバー時のエフェクト
+.works-list__btn-link:hover {
+    color: $white;
+}
+
+.works-list__btn-link:hover::after {
+    transform: scale(1, 1);
+    transition: 0.3s ease;
+}
+

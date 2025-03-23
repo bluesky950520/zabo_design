@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.common-list-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: rem(335);
+    width: 100%;
+    line-height: 1;
+    font-size: rem(14);
+    font-weight: $black1;
+    padding: rem(34) rem(50) rem(35) rem(10);
+    border: 1px solid $black;
+    color: $black;
+    border-radius: rem(42.5);
+    // text-align: center;
+    transition: 0.7s;
+    cursor: pointer;
+
+    @include mq("md") {
+        max-width: rem(783);
+        font-size: rem(20);
+        padding: rem(31.5) rem(10);
+    }
+}
+
+.common-list-btn.common-list-btn--faq {
+    background-color: $yellow2;
+    border: 0;
+}
+
+.common-list-btn::after {
+    content: "";
+    display: inline-block;
+    width: rem(27);
+    height: rem(27);
+    background-image: url("/images/common/common-list-btn-arrow.svg"); // ✅ SVGアイコンのパスを指定
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 19%;
+    transform: translateY(-50%);
+
+    @include mq("md") {
+        width: rem(30);
+        height: rem(30);
+        right: 25%;
+    }
+
+    // content: "";
+    // display: inline-block;
+    // width: rem(6);
+    // height: rem(6);
+    // border-right: rem(1) solid $black;
+    // border-bottom: rem(1) solid $black;
+    // position: absolute;
+    // right: 24%;
+    // top: 48%;
+    // transform: translateY(-50%) rotate(45deg);
+}
+
+// .common-list-btn::before {
+//     content: "";
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: rem(27);
+//     height: rem(27);
+//     border: rem(1) solid $black;
+//     border-radius: 50%;
+//     position: absolute;
+//     right: 21%;
+//     top: 50%;
+//     transform: translateY(-50%);
+// }
+
+.common-list-btn:hover {
+    background-color: $yellow2;
+}
+
+
+.common-list-btn.common-list-btn--faq:hover {
+    background-color: $blue1;
+}

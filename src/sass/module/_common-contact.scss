@@ -1,0 +1,133 @@
+@use "global" as *;
+
+.common-contact {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq("md") {
+        display: block;
+        text-align: center;
+    }
+}
+
+.common-contact__wrap {
+    display: flex;
+
+    @include mq("md") {
+        flex-direction: column-reverse;
+    }
+}
+
+.common-contact__img {
+    width: 59.933vw;
+    margin-left: calc(50% - 50vw);
+
+    @include mq("md") {
+        width: 100vw;
+    }
+}
+
+.common-contact__img img {
+    width: 100%;
+    height: rem(446);
+    object-fit: cover;
+
+    @include mq("md") {
+        height: rem(240);
+    }
+}
+
+.common-contact__content {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 43.0555555%;
+
+    @include mq("md") {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.common-contact__body {
+
+    @include mq("md") {
+        padding: rem(80) 0;
+        text-align: center;
+    }
+}
+
+.common-contact__text {
+    font-size: rem(18);
+    font-weight: $regular;
+    line-height: lh(30, 18);
+    color: $white;
+
+    @include mq("md") {
+        font-size: rem(14);
+        line-height: lh(28, 14);
+    }
+}
+
+.common-contact__btn-wrap {
+    margin-top: rem(26);
+
+    @include mq("md") {
+        margin-top: rem(30);
+    }
+}
+
+.common-contact__btn+.common-contact__btn {
+    @include mq("md") {
+        margin-top: rem(20);
+    }
+}
+
+.common-contactBtn {
+    position: relative;
+    display: inline-block;
+    background-color: $blue1;
+    font-size: rem(14);
+    font-weight: $regular;
+    font-family: $second-font-family;
+    line-height: 1;
+    color:  $black;
+    padding: rem(10);
+    min-width: rem(145);
+    border: rem(1) solid  $black;
+    border-radius: rem(4);
+    text-align: center;
+    transition: .3s ease;
+    z-index: 1;
+    text-transform: capitalize;
+}
+
+.common-contactBtn__icon {
+    margin-right: rem(12);
+
+    @include mq("md") {
+        margin-right: rem(10);
+    }
+}
+
+.common-contactBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background:  $black;
+    z-index: -1;
+    transition: .3s ease;
+}
+
+.common-contactBtn:hover {
+    color: $blue1;
+}
+
+.common-contactBtn:hover::before {
+    width: 100%;
+}

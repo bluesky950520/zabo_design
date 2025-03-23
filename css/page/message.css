@@ -1,0 +1,128 @@
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Noto Serif JP", sans-serif;
+  color: #000000;
+  background-color: #e9ebeb;
+}
+
+@media screen and (max-width: 768px) {
+  .u-desktop {
+    display: none;
+  }
+}
+
+.u-mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .u-mobile {
+    display: block;
+  }
+}
+
+.message {
+  overflow: hidden;
+}
+
+.message__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .message__flex {
+    display: block;
+  }
+}
+
+.message__content {
+  width: 67.272727%;
+  background-color: #F8F8F8;
+  padding: 70px 30px;
+  padding: 4.375rem 1.875rem;
+}
+@media screen and (max-width: 768px) {
+  .message__content {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    padding: 3.75rem 1.25rem 15.375rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .message__body {
+    max-width: 37.5rem;
+    width: 100%;
+    padding: 0 1.25rem;
+    margin: 0 auto;
+  }
+}
+
+.message__title {
+  padding: 0 2px;
+  padding: 0 0.125rem;
+}
+
+.message__text,
+.message__ceo-name {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .message__text,
+  .message__ceo-name {
+    font-size: 0.875rem;
+  }
+}
+
+.message__text {
+  margin-top: 60px;
+  margin-top: 3.75rem;
+  line-height: 2.375;
+}
+@media screen and (max-width: 768px) {
+  .message__text {
+    line-height: 2.2857142857;
+    margin-top: 1.875rem;
+  }
+}
+
+.message__ceo-name {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .message__ceo-name {
+    margin-top: 1.875rem;
+  }
+}
+
+.message__career {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  color: #404040;
+}
+
+.message__img {
+  width: 32.7272%;
+  aspect-ratio: 360/535;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .message__img {
+    width: 100%;
+    aspect-ratio: 335/300;
+    margin-top: -13.6rem;
+  }
+}
+
+.message__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=message.css.map */

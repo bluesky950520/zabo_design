@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.breadcrumb-list__between:not(:last-of-type)::after {
+    content: "";
+    display: inline-block;
+    height: rem(1);
+    width: rem(20);
+    background-color: $black;
+    margin: 0 rem(9);
+}
+
+.breadcrumb-list__between:last-of-type  {
+    display: inline-block;
+    max-width: rem(115);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

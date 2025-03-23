@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.breadcrumb__inner {
+    max-width: rem(1380);
+    width: 100%;
+    padding: 0 rem(30);
+    margin: 0 auto;
+    @include mq("md") {
+        padding: 0 rem(10);
+    }
+}
+
+.breadcrumb span {
+    display: inline-flex;
+    font-size: rem(15);
+    line-height: 1;
+    font-weight: $regular;
+    font-family: $second-font-family;
+    text-transform: capitalize;
+    color: $black;
+    align-items: center;
+    @include mq("md") {
+        font-size: rem(10);
+    }
+}
+
+.breadcrumb a span {
+    color: $black;
+}
+
+

@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.top-space {
+    background-image: url(../images/common/sub-space-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top-space__content {
+    padding: rem(80) 0;
+
+    @include mq("md") {
+        padding: rem(60) 0;
+    }
+}
+
+.top-space__block {
+    background-color: rgba( $black, 0.5);
+    padding: rem(30) rem(40);
+
+    @include mq("md") {
+        padding: rem(20);
+    }
+}
+
+.top-space__text {
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: 2.375;
+    text-align: left;
+    color:  $black;
+
+    @include mq("md") {
+        font-size: rem(14);
+        line-height: 2.285;
+    }
+}
+
+.top-space__btn {
+    display: block;
+    text-align: center;
+    margin-top: rem(60);
+}

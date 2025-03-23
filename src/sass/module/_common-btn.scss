@@ -1,0 +1,135 @@
+@use "global" as *;
+
+.common-btn {
+    position: relative;
+    font-size: rem(14);
+    font-family: $second-font-family;
+    font-weight: $medium;
+    line-height: 1;
+    color:  $black;
+    text-transform: uppercase;
+}
+
+.common-btn::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    mask-image: url(../images/common/icon-arrow.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    background-color: $black;
+    height: rem(9);
+    width: rem(9);
+    right: rem(-17);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.common-btn:hover::after {
+    transform: translateX(rem(5)) translateY(-50%);
+}
+
+.common-btn::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: rem(1);
+    background-color:  $black;
+    bottom: rem(-4);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.common-btn:hover::before {
+    width: calc(100% + rem(20));
+    transform: scaleX(1);
+}
+
+.common-btn.common-btn--space {
+    display: inline-block;
+    padding: rem(14) rem(10) rem(14) rem(24);
+    min-width: rem(141);
+    background-color: transparent;
+    border: rem(1) solid  $black;
+    border-radius: rem(4);
+    color:  $black;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.common-btn.common-btn--space::before {
+    display: none;
+}
+
+.common-btn.common-btn--space::after {
+    right: rem(20);
+    background-color:  $black;
+}
+
+.common-btn.common-btn--prev {
+    display: inline-block;
+    padding: rem(14) rem(24);
+    min-width: rem(133);
+    background-color: transparent;
+    border: rem(1) solid $black;
+    border-radius: rem(4);
+    font-family: $base-font-family;
+    color: $black;
+    text-align: right;
+}
+
+.common-btn.common-btn--prev::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    mask-image: url(../images/common/icon-arrow.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    background-color: $black;
+    height: rem(9);
+    width: rem(9);
+    top: 50%;
+    left: rem(29);
+    transform: translateY(-50%) scaleX(-1);
+    transition: 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.common-btn.common-btn--prev::after {
+    display: none;
+}
+
+.common-btn.common-btn--next {
+    display: inline-block;
+    padding: rem(14) rem(24);
+    min-width: rem(133);
+    background-color: transparent;
+    border: rem(1) solid $black;
+    border-radius: rem(4);
+    font-family: $base-font-family;
+    color: $black;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.common-btn.common-btn--next::after {
+    right: rem(20);
+}
+
+.common-btn.common-btn--next:hover:before {
+    display: none;
+}
+
+.common-btn.common-btn--prev:hover::before {
+    transform: translate(rem(-5), -50%) scaleX(-1);
+}

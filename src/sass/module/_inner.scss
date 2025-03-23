@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.inner {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $inner + strip-unit($padding-sp) * 2;
+  height: inherit;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  @include mq("md") {
+    // padding-right: $padding-pc;
+    // padding-left: $padding-pc;
+    // max-width: rem(600);
+    max-width: $inner + strip-unit($padding-pc) * 2;
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+  }
+}

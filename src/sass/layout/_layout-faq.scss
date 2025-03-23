@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.layout-faq {
+    margin-top: rem(78);
+    @include mq("md") {
+        margin-top: rem(177);
+
+    }
+}

@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.single-sidebar__archive {
+    margin-top: rem(44);
+
+    @include mq("md") {
+        margin-top: rem(39);
+    }
+}
+
+.single-sidebar__category {
+    margin-top: rem(39);
+}

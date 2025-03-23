@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.common-nav-menu {
+    transform: translate3d(0, 50px, 0);
+    transition: 1s;
+    opacity: 0;
+}
+
+.common-nav-menu.is-active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.common-nav-menu__list {
+    @include mq("md") {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(8) rem(15);
+    }
+}
+
+.common-nav-menu__item {
+    @include mq("md") {
+        display: inline-block;
+    }
+}
+
+.common-nav-menu__link {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: rem(15);
+    font-weight: $medium;
+    font-family: $second-font-family;
+    color: $black;
+    padding: rem(10) rem(30);
+    transition: 0.3s ease;
+    text-transform: capitalize;
+
+    @include mq("md") {
+        display: initial;
+        font-size: rem(12);
+        padding: rem(5) rem(25);
+    }
+}
+
+.common-nav-menu__link.common-nav-menu__link--top {
+    color:  $black;
+}
+
+.common-nav-menu__link:hover {
+    opacity: 0.7;
+}
+
+.common-nav-menu__link.is-active {
+    color: $black;
+}
+
+.common-nav-menu__link.is-active::before {
+    content: "";
+    position: absolute;
+    width: rem(40);
+    height: rem(40);
+    background-image: url('../images/common/icon1.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: -2%;
+    transform: translate(2%, -50%);
+    @include mq("md") {
+        width: rem(35);
+        height: rem(35);
+    }
+}

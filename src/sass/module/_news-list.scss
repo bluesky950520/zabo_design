@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.news-list__item:first-of-type .news-item {
+    padding-top: 0;
+
+    @include mq("md") {
+        padding-top: rem(14.4);
+        border-top: rem(1) solid  $black;
+    }
+}

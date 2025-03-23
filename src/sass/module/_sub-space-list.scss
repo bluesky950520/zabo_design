@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.sub-space-list__item+.sub-space-list__item {
+    margin-top: rem(120);
+
+    @include mq("md") {
+        margin-top: rem(50);
+    }
+}

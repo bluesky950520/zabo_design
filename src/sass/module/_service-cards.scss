@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.service-cards {
+    @include mq("md") {
+        margin: 0 rem(25);
+    }
+}
+
+.service-cards__item:nth-child(1) .service-card__img2 {
+    position: relative;
+    aspect-ratio: 335/219;
+    overflow: visible;
+
+
+    @include mq("md") {
+        aspect-ratio: 441/473;
+        width: initial;
+        left: 5%;
+
+    }
+}
+
+.service-cards__item:nth-child(2) .service-card__content,
+.service-cards__item:nth-child(4) .service-card__content {
+    @include mq("md") {
+        flex-direction: row-reverse;
+
+    }
+}
+
+.service-cards__item:nth-child(2) .service-card__img1,
+.service-cards__item:nth-child(4) .service-card__img1 {
+    
+    top: 4%;
+    left: 0%;
+    @include mq("md") {
+        top: 18%;
+        left: 15%;
+    }
+}
+
+.service-cards__item:nth-child(1) .service-card__img1 {
+    @include mq("md") {
+        top: calc(50% - rem(192)); // `.service-card__body` の中央基準で調整
+        left: calc(50% + rem(160)); // `.service-card__body` の中央から少し右へ
+    }
+  }
+
+.service-cards__item:nth-child(3) .service-card__img1 {
+    @include mq("md") {
+        top: calc(50% - rem(192)); // `.service-card__body` の中央基準で調整
+        left: calc(50% + rem(160)); // `.service-card__body` の中央から少し右へ
+    }
+  }

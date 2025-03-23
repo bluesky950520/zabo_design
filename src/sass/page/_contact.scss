@@ -1,0 +1,99 @@
+@use "global" as *;
+
+.contact {
+    position: relative;
+    background-color: $blue3;
+    margin-top: rem(214);
+    // // height: rem(1602);
+    // background-image: url(/images/common/contact-bg1.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center top;
+    // background-size: cover;
+    // @include mq("md") {
+    //     background-image: url(/images/common/contact-bg.jpg);
+
+    // }
+    @include mq("md") {
+        margin-top: rem(286);
+
+    }
+}
+
+.contact__top {
+    position: relative;
+}
+
+.contact__top-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: rem(286);
+    transform: translateY(-50%);
+    width: 100%; // 画像を横幅いっぱいにする
+    // 親要素の高さいっぱいにする
+}
+
+.contact__top-img img {
+    width: 100%; // 画像を横幅いっぱいにする
+    height: 100%; // 画像を親要素いっぱいにする
+}
+
+.contact__top-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: rem(30);
+    font-weight: $black1;
+    letter-spacing: 0.1em;
+    color: $black;
+    max-width: rem(570);
+    width: 100%;
+
+    @include mq("md") {
+        font-size: rem(50);
+
+    }
+}
+
+.contact__top-blue {
+    color: $blue1;
+}
+
+.contact__logo {
+    position: absolute;
+    top: 7%; // 上から50%の位置
+    right: 0; // 左から50%の位置
+    width: rem(176);
+
+    @include mq("md") {
+        width: rem(405);
+        top: 8%;
+        right: 2%;
+    }
+
+    @media (min-width: 2300px) {
+        top: 22%;
+        right: 27%; // 1440px以上のとき、右側の余白を増やす
+    }
+
+}
+
+.contact__inner {
+    padding-top: rem(193);
+    padding-bottom: rem(45);
+
+    @include mq("md") {
+        padding-top: rem(208);
+        padding-bottom: rem(107);
+    }
+}
+
+.contact__form {
+    margin-top: rem(35);
+
+    @include mq("md") {
+        margin-top: rem(60);
+    }
+}

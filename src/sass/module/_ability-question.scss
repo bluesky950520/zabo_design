@@ -1,0 +1,229 @@
+@use "global" as *;
+
+// .ability-question {
+//     // max-width: rem(336);
+//     // width: 100%;
+//     // border-radius: rem(5);
+
+//     // display: flex;
+//     // align-items: center;
+//     // justify-content: space-between;
+//     // background: #3b73ff;
+//     // color: white;
+//     // font-size: 16px;
+//     // width: 100%;
+//     // padding: 15px;
+//     // cursor: pointer;
+//     // position: relative;
+//     // transition: all 0.3s ease;
+//     // border-top-right-radius: 5px;
+//     // border-bottom-right-radius: 5px;
+// }
+
+.ability-question__block {
+    display: flex;
+    // align-items: center;
+
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // background: #3b73ff;
+    // color: white;
+    // font-size: 16px;
+    // width: 100%;
+    // padding: 15px;
+    // border: none;
+    // cursor: pointer;
+    // position: relative;
+    // text-align: left;
+    // transition: all 0.3s ease;
+  
+    /* 右上・右下の角を丸くする */
+    // border-radius: 5px;
+    transition: border-radius 1s ease-in-out;
+}
+
+.ability-question__number1 {
+    background: yellow;
+    color: black;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+    min-width: 50px;
+    text-align: center;
+    transition: border-radius 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1; /* 初期状態では表示 */
+}
+
+/* アコーディオン展開時に非表示にする */
+// .js-accordion-item.is-open .ability-question__number1 {
+//     color: transparent;  /* 01のテキストを非表示 */
+//     height: 100%;  /* 下に伸ばす */
+//     align-items: stretch;
+//     display: flex;
+// }
+/* アコーディオンが開いたら非表示 */
+.js-accordion-item.is-open .ability-question__number1 {
+    // opacity: 0; /* フェードアウト */
+    border-radius: rem(5) 0 0 0;
+    color: transparent;
+    // opacity: 0; /* 「01」をフェードアウト */
+  }
+
+  /* アコーディオンが閉じたらフェードイン */
+  .js-accordion-item:not(.is-open) .ability-question__number1 {
+    color: black; /* 数字を再表示 */
+    transition: 1s ease-out;
+  }
+
+.ability-question__content-block {
+  display: flex;
+  transition: border-radius 1s ease-in-out;
+}
+
+
+.ability-question__number {
+//     font-size: rem(20);
+//     font-weight: $black1;
+//     color: $blue1;
+//     background-color: $yellow2;
+//     padding: rem(10);
+//     border-radius: rem(5) 0 0 rem(5);
+//     line-height: 1;
+//     transition: all 0.3s ease;
+
+//       /* 伸びるようにする */
+//   align-self: stretch;
+
+// display: none;
+  background: yellow;
+  color: black;
+  padding: 8px 12px;
+  font-weight: bold;
+  border-radius: 0 0 0 5px;
+  transition: border-radius 1s ease-in-out;
+  min-width: 50px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 展開時に表示 */
+// .js-accordion-item.is-open .ability-question__number {
+//     display: flex;
+//     // height: 100%;
+//     padding-bottom: 30px; /* 伸びるように */
+// }
+
+.ability-question__title {
+    font-size: rem(18);
+    font-weight: $black1;
+    line-height: 1;
+    text-align: center;
+    color: $white;
+    background-color: $blue1;
+    // border-radius: 0 rem(5) rem(5) 0;
+    // border-top-left-radius: rem(5);
+    border-top-right-radius: rem(5);
+    // border-bottom-left-radius: rem(5);
+    border-bottom-right-radius: rem(5);
+    transition: border-radius 1s ease-in-out;
+    padding: rem(11);
+    width: 100%;
+}
+
+.js-accordion-item.is-open .ability-question__title {
+  // border-bottom-left-radius: 0; /* 下の角丸を解除 */
+  border-bottom-right-radius: 0;
+}
+
+.ability-question__content {
+    display: flex;
+    
+//     display: none;
+//     background-color: $blue1;
+// color: black;
+// padding: 15px;
+// border-radius: 0 0 5px 5px;
+// overflow: hidden;
+// transition: max-height 0.3s ease-out;
+// max-height: 0;
+}
+
+.ability-question__body {
+    // display: none;
+    background-color: $blue1;
+    border-radius: 0 0 rem(5) 0;
+}
+
+// .js-accordion-item.is-open .ability-question__body {
+//     display: flex;
+//     // height: 100%;
+//     padding-bottom: 30px; /* 伸びるように */
+// }
+
+.ability-question__inner {
+    padding: 0 rem(23) rem(25);
+}
+
+.ability-question__img {
+   aspect-ratio: 250/177;
+   overflow: hidden;
+}
+
+.ability-question__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ability-question__text {
+    font-size: rem(14);
+    font-weight: $semibold;
+    color: $white;
+    margin-top: rem(18);
+}
+
+// /* 開いたときに番号部分も伸びる */
+// .ability-question-list__item.is-active .ability-question__number {
+//     height: 100%;
+//     padding-bottom: 30px;
+//   }
+  
+
+
+// /* 展開時に表示する */
+// .ability-question-list__item.is-active .ability-question__number {
+//     display: flex;
+//     height: 100%;
+//     padding-bottom: 30px; /* 伸びるように */
+// }
+
+/* アコーディオンが開いた時に角丸を削除 */
+// .js-accordion-item.is-open .ability-question__block {
+//     border-radius: 0;
+//   }
+  
+//   .js-accordion-item.is-open .ability-question__title {
+//     border-radius: 0 rem(5) 0 0;
+//   }
+
+//   .js-accordion-item.is-open .ability-question__number1 {
+//     border-radius: rem(5) 0 0 0;
+//     color: transparent;
+//     // opacity: 0; /* 「01」をフェードアウト */
+//   }
+
+  /* アコーディオンが閉じたら数字を戻す */
+
+
+//   /* アニメーション完了後に角丸を戻す */
+// .js-accordion-content {
+//     transition: height 0.5s ease-in-out;
+//   }

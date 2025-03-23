@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.common-title__jp-title {
+    font-size: rem(14);
+    font-weight: $black1;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $black;
+
+    @include mq("md") {
+        font-size: rem(16);
+
+    }
+}
+
+.common-title__eng-title {
+    font-size: rem(30);
+    font-weight: $black1;
+    font-family: $second-font-family;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    color: $black;
+    margin-top: rem(2);
+
+    @include mq("md") {
+        font-size: rem(40);
+        margin-top: rem(6);
+    }
+}
+
+.common-title.common-title--left {
+    transform: translate3d(-50px, 0, 0);
+    transition: 1s;
+    opacity: 0;
+}
+
+.common-title.common-title--left.is-active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.common-title.common-title--right {
+    text-align: right;
+    transform: translate3d(50px, 0, 0);
+    transition: 1s;
+    opacity: 0;
+
+    @include mq("md") {
+        text-align: left;
+    }
+}
+
+.common-title.common-title--right.is-active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.common-title.common-title--small {
+    font-size: rem(40);
+}
+
+.common-title__jp-title.common-title__jp-title--expert,
+.common-title__eng-title.common-title__eng-title--expert {
+    color: $white;
+}

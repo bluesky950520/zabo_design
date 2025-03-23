@@ -1,0 +1,247 @@
+@use "global" as *;
+
+.faq-question {
+    width: 100%;
+
+    // @include mq("md") {
+    //     max-width: rem(700);
+    // }
+}
+
+.faq-question__block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $blue3;
+    cursor: pointer;
+    padding: rem(14);
+    border-radius: rem(5);
+    // border-top-left-radius: rem(5);
+    // border-top-right-radius: rem(5);
+    justify-content: space-between;
+    // align-items: center;
+
+    @include mq("md") {
+        flex-direction: row;
+        padding: rem(30) rem(20);
+    }
+}
+
+.faq-question__block.is-open {
+    border-bottom-left-radius: 0;
+    /* 下の角丸を解除 */
+    border-bottom-right-radius: 0;
+}
+
+.faq-question__body {
+    margin-right: rem(40);
+
+    @include mq("md") {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.faq-question__answer-img,
+.faq-question__question-img {
+    width: rem(44);
+    flex-shrink: 0;
+    @include mq("md") {
+        width: rem(68);
+
+    }
+}
+
+
+.faq-question__title {
+    font-size: rem(16);
+    font-weight: $semibold;
+    letter-spacing: 0.1em;
+    color: $black;
+    padding-top: rem(5);
+
+
+
+
+    @include mq("md") {
+        font-size: rem(18);
+        margin-left: rem(20);
+    }
+}
+
+.faq-question__title span {
+    text-transform: uppercase;
+}
+
+// .faq-question__block::before,
+// .faq-question__block::after {
+//     position: absolute;
+//     content: "";
+//     display: block;
+//     top: 50%;
+//     right: rem(16);
+//     transform: translateY(-50%);
+//     width: rem(10);
+//     height: rem(2);
+//     border-radius: rem(1);
+//     background-color: $white;
+//     transition: transform 0.5s ease-in-out;
+//     z-index: 1;
+
+//     @include mq("md") {
+//         right: rem(40);
+//         width: rem(10);
+//     }
+// }
+
+// .faq-question__block::after {
+//     transform: rotate(90deg);
+//     top: 48%;
+// }
+
+// .faq-question__block.is-open::after {
+//     transform: translateY(-50%) rotate(0deg);
+//     opacity: 0; // `is-open` クラスがついたら `::after` を非表示にする
+// }
+
+// .faq-question__icon {
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     top: 40%;
+//     right: 3%;
+//     width: rem(28);
+//     height: rem(28);
+//     border-radius: 50%;
+//     background-color: $blue1;
+//     flex-shrink: 0;
+// }
+
+.faq-question__icon {
+    position: absolute;
+    /* ← 特定の位置に配置できるように変更 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(28);
+    height: rem(28);
+    border-radius: 50%;
+    background-color: $blue1;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease-in-out;
+
+    /* ✅ アイコンの位置を調整 */
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+
+    @include mq("md") {
+        width: rem(50);
+        height: rem(50);
+    }
+}
+
+.faq-question__icon::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: rem(2);
+    background-color: $white;
+    border-radius: rem(1);
+    transition: transform 0.3s ease-in-out;
+
+    @include mq("md") {
+        height: rem(3);
+        border-radius: rem(1.5);
+    }
+}
+
+/* ✅ 縦線（+ のときのみ表示） */
+.faq-question__icon::after {
+    content: "";
+    position: absolute;
+    width: rem(2);
+    height: 40%;
+    background-color: $white;
+    border-radius: rem(1);
+    transition: opacity 0.3s ease-in-out;
+
+    @include mq("md") {
+        width: rem(3);
+        border-radius: rem(1.5);
+
+    }
+}
+
+.faq-question__block.is-open .faq-question__icon::after {
+    opacity: 0; // 縦線を非表示にして「-」だけを残す
+}
+
+// .faq-question__content-block {
+//     margin-right: rem(40);
+
+//     @include mq("md") {
+//         display: flex;
+//         align-items: center;
+//     }
+// }
+
+.faq-question__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $blue1;
+    cursor: pointer;
+    padding: rem(14);
+    border-bottom-left-radius: rem(5);
+    border-bottom-right-radius: rem(5);
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq("md") {
+        flex-direction: row;
+        padding: rem(30) rem(20);
+
+    }
+}
+
+// .faq-question__answer-img {
+//     width: rem(44);
+
+//     @include mq("md") {
+//         width: rem(68);
+//     }
+// }
+
+
+.faq-question__content-block {
+    margin-right: rem(40);
+
+    @include mq("md") {
+        display: flex;
+        align-items: center;
+        margin-right: rem(109);
+
+    }
+}
+
+
+
+.faq-question__text {
+    font-size: rem(14);
+    font-weight: $semibold;
+    letter-spacing: 0.1em;
+    color: $white;
+    // background-color: $blue1;
+    // padding: rem(60) rem(50) rem(20) rem(20);
+    border-bottom-left-radius: rem(5);
+    border-bottom-right-radius: rem(5);
+
+    padding-top: rem(5);
+
+    @include mq("md") {
+        font-size: rem(18);
+        margin-left: rem(20);
+    }
+}

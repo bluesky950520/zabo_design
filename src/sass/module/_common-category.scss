@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.common-category {
+    display: inline-block;
+    text-align: center;
+    font-size: rem(11);
+    font-weight: $medium;
+    line-height: 1;
+    color:  $black;
+    padding: rem(6.5) rem(18);
+    background-color: transparent;
+    border: solid rem(1)  $black;
+
+    @include mq("md") {
+        font-size: rem(10);
+        padding: rem(3) rem(8);
+    }
+}
+
+.common-category.common-category--sub {
+    color:  $black;
+    background-color:  $black;
+    border: solid rem(1)  $black;
+}

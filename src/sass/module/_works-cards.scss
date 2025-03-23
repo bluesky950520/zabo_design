@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.works-cards {
+    position: relative;
+}
+
+.works-cards__inner {
+    @include mq("md") {
+        padding-top: rem(63);
+        padding-bottom: rem(96);
+    }
+
+}
+
+.works-cards__wrapper {
+
+    // position: relative;
+    // margin-right: calc(50% - 50vw);
+    // margin-top: rem(14);
+    @include mq("md") {
+        position: relative;
+    }
+}
+
+.works-cards__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.works-cards__item.swiper-slide {
+    max-width: rem(335);
+    width: 100%;
+    height: auto;
+
+    @include mq("md") {
+        max-width: initial;
+    }
+}
+
+.works-cards__item {
+    @include mq("md") {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        // margin-bottom: rem(40);
+        /* 下のアイテムとの間隔を調整 */
+    }
+}
+
+.works-cards__item+.works-cards__item {
+    @include mq("md") {
+        margin-top: rem(108);
+    }
+}
+
+/* 画像サイズ調整 */
+.swiper-slide img {
+    width: 100%;
+    // height: auto;
+    object-fit: cover;
+}
+
+.swiper-wrapper {
+    @include mq("md") {
+        display: block;
+        /* PC時はスライドを無効にしてブロック要素として扱う */
+    }
+}

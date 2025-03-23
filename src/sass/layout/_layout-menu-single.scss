@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.layout-menu-single {
+    margin-top: rem(56);
+
+    @include mq("md") {
+        margin-top: rem(25);
+    }
+}

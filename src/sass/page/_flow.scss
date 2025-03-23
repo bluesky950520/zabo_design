@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.flow {
+    position: relative;
+}
+
+.flow::before {
+
+    content: "";
+    position: absolute;
+    background: $blue3;
+    // padding-top: rem(50);
+
+    // transform: translateY(-50%);
+    z-index: -1;
+
+
+    width: 100%;
+    height: 22%;
+    // top: 56%;
+    left: 0;
+    top: 27%;
+
+    // transform: 0;
+    @include mq("md") {
+        top: 23%;
+        // top: 30%;
+    }
+}
+
+.flow__title {
+    text-align: center;
+}
+
+.flow__cards {
+    margin-top: rem(26);
+
+    @include mq("md") {
+        margin-top: rem(31);
+    }
+}

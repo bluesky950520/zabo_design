@@ -1,0 +1,93 @@
+@use "global" as *;
+
+.craftmanship {
+    background-color:  $black;
+}
+
+.craftmanship__items {
+    padding: rem(80) 0;
+
+    @include mq("md") {
+        padding: rem(40) 0;
+
+    }
+}
+
+.craftmanship__item {
+    display: flex;
+    gap: rem(30);
+
+    @include mq("md") {
+        flex-direction: column-reverse;
+    }
+}
+
+.craftmanship__item+.craftmanship__item {
+    padding-top: rem(50);
+
+    @include mq("md") {
+        padding-top: rem(30);
+    }
+}
+
+.craftmanship__item:nth-child(even) {
+    flex-direction: row-reverse;
+
+    @include mq("md") {
+        flex-direction: column-reverse;
+    }
+}
+
+.craftmanship__img {
+    width: 50%;
+    aspect-ratio: 550/550;
+
+    @include mq("md") {
+        width: 100%;
+        aspect-ratio: 250/250;
+    }
+}
+
+.craftmanship__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 rem(4) rem(4) 0 rgba(0, 0, 0, 0.25);
+
+    @include mq("md") {
+        box-shadow: rem(3) rem(3) rem(6) 0 rgba(0, 0, 0, 0.26);
+    }
+}
+
+.craftmanship__block {
+    width: 50%;
+
+    @include mq("md") {
+        width: 100%;
+        margin-top: rem(20);
+    }
+}
+
+.craftmanship__sub-title {
+    margin-top: rem(50);
+    font-size: rem(16);
+    color: $black;
+
+    @include mq("md") {
+        margin-top: rem(20);
+        font-size: rem(14);
+    }
+}
+
+.craftmanship__text {
+    font-size: rem(14);
+    letter-spacing: 0.05em;
+    margin-top: rem(30);
+    font-weight: $light;
+    color: $black;
+
+    @include mq("md") {
+        margin-top: rem(23);
+        font-size: rem(14);
+    }
+}

@@ -1,0 +1,239 @@
+@use "global" as *;
+
+.menu-single__inner {
+    max-width: rem(890);
+    width: 100%;
+
+    @include mq("md") {
+        max-width: rem(600);
+        padding-left: rem(30);
+        padding-right: rem(30);
+    }
+}
+
+.menu-single__category-wrap {
+    display: flex;
+    gap: rem(10) rem(21);
+    flex-wrap: wrap;
+}
+
+.menu-single__title {
+    font-size: rem(26);
+    font-weight: $medium;
+    margin-top: rem(20);
+
+    @include mq("md") {
+        font-size: rem(18);
+        line-height: lh(30, 18);
+        margin-top: rem(14);
+
+    }
+}
+
+.menu-single__date {
+    display: inline-block;
+    font-size: rem(11);
+    font-weight: $bold;
+    color: $black;
+    margin-top: rem(20);
+
+    @include mq("md") {
+        font-size: rem(10);
+        margin-top: rem(10);
+    }
+}
+
+.menu-single__img {
+    aspect-ratio: 840/471;
+    overflow: hidden;
+    margin-top: rem(37);
+
+    @include mq("md") {
+        aspect-ratio: 315/176;
+        margin-top: rem(32);
+    }
+}
+
+.menu-single__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-single__area {
+    max-width: rem(680);
+    width: 100%;
+    margin-top: rem(40);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq("md") {
+        max-width: rem(580);
+    }
+}
+
+.menu-single__btn {
+    text-align: center;
+    margin-top: rem(64);
+
+    @include mq("md") {
+        margin-top: rem(73);
+    }
+}
+
+.menu-single__btn-link {
+    display: inline-block;
+    font-size: rem(14);
+    font-family: $base-font-family;
+    font-weight: $medium;
+    color: $blue2;
+    padding: rem(10.5);
+    max-width: rem(285);
+    width: 100%;
+    background-color:  $black;
+    border: rem(1) solid  $black;
+    border-radius: rem(4);
+    text-align: center;
+}
+
+.menu-single__btn-text {
+    position: relative;
+    left: rem(10);
+}
+
+.menu-single__btn-text::before {
+    content: "";
+    position: absolute;
+    mask-image: url(../images/common/icon-arrow-left.svg);
+    background-color: $black;
+    left: rem(-20);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    height: rem(9);
+    width: rem(9);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.menu-single__btn-link:hover .menu-single__btn-text::before {
+    transform: translateX(rem(-5)) translateY(-50%);
+}
+
+
+
+/* オープニングアニメーション */
+.opening-animation {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #5a7ec7;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.opening-bg {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    opacity: 0;
+}
+
+.opening-text, .opening-logo, .opening-character, .opening-nice {
+    position: absolute;
+    opacity: 0;
+}
+
+.opening-text-1 {
+    top: 20%;
+    right: 10%;
+    color: black;
+}
+
+.opening-text-2 {
+    top: 30%;
+    right: 20%;
+    color: black;
+}
+
+.opening-logo {
+    bottom: 10%;
+    left: 15%;
+}
+
+.opening-character {
+    bottom: 10%;
+    right: 15%;
+}
+
+.opening-nice {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transform: translateX(-50px);
+}
+
+.opening-handwriting {
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+}
+
+
+
+
+
+article:not(.sticky) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-color: whitesmoke;
+  }
+  article h2 {
+    text-align: center;
+  }
+  .horizontal_scroll {
+    --sticky-container-height: 100vh;
+    height: var(--sticky-container-height);
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  .horizontal_scroll .sticky {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .horizontal_scroll .scroller {
+    display: flex;
+    overflow: auto;
+  }
+  .horizontal_scroll .scroller.nobar {
+    overflow: hidden;
+  }
+  .horizontal_scroll .scroller > * {
+    flex-basis: 66%;
+    flex-shrink: 0;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+  .horizontal_scroll .scroller > *:not(:first-child) {
+    margin-left: 1%;
+  }

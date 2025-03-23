@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.expert {
+    background-color: $blue1;
+}
+
+.expert__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+
+    @include mq("md") {
+        padding-top: rem(126);
+        padding-bottom: rem(128);
+    }
+}
+
+.expert__title {
+    text-align: center;
+}
+
+
+.expert__cards {
+    margin-top: rem(19);
+
+    @include mq("md") {
+        margin-top: rem(80);
+
+    }
+}

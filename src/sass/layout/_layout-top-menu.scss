@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.layout-top-menu {
+    margin-top: 2vw;
+
+}
+
+// .layout-top-works {
+//     // margin-top: rem(100);
+//     padding-top: rem(150);
+//     position: relative;
+
+//     @include mq("md") {
+//         padding-top: rem(60);
+//     }
+// }
+
+// .layout-top-works::before {
+//     content: "";
+//     position: absolute;
+//     top: rem(-58);
+//     right: 0;
+//     left: 0;
+//     background-image: url(/images/common/wave4.svg);
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     width: 100%;
+//     height: 7.638888888vw;
+
+//     @include mq("md") {
+//         top: rem(-0.1);
+//         height: 9vw;
+//     }
+// }

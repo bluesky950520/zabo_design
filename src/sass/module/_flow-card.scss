@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.flow-card {
+    display: block;
+    // background-color: $white;
+    color: $black;
+    height: 100%;
+    /* テキスト数増減に応じて各カードの高さを揃える */
+
+    cursor: pointer;
+}
+
+// .flow-card__inner {
+//     padding: rem(16) rem(16) rem(24);
+// }
+
+.flow-card__block {
+    // padding: rem(10) rem(18) rem(27);
+    background-color: $white;
+    border-radius: rem(5);
+    padding: rem(4.5) rem(18) rem(4.5);
+    box-shadow: 0 0 rem(10) 0 rgba(0, 0, 0, 0.25);
+}
+
+.flow-card__img {
+    aspect-ratio: 121/121;
+    overflow: hidden;
+
+    @include mq("md") {
+        aspect-ratio: 140/140;
+    }
+}
+
+.flow-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.flow-card:hover img {
+    transform: scale(1.1);
+}
+
+.flow-card__title {
+    font-size: rem(18);
+    font-weight: $black1;
+    color: $blue1;
+    text-align: center;
+
+    @include mq("md") {
+        font-size: rem(20);
+
+    }
+}
+
+.flow-card__body {
+    margin-top: rem(15);
+
+    @include mq("md") {
+        margin-top: rem(18);
+
+    }
+}
+
+.flow-card__text {
+    font-size: rem(14);
+    font-weight: $semibold;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    color: $black;
+
+    @include mq("md") {
+        font-size: rem(16);
+        line-height: 1.8;
+    }
+}

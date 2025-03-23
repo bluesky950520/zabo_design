@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.faq-question-list__items.faq-question-list__items--hidden {
+    display: none;
+    margin-top: rem(10);
+
+}
+
+.faq-question-list__item+.faq-question-list__item {
+    margin-top: rem(10);
+}
+
+.faq-question-list__btn {
+    margin-top: rem(50);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq("md") {
+        margin-top: rem(74);
+    }
+}

@@ -1,0 +1,104 @@
+@use "global" as *;
+
+.message__flex {
+    display: flex;
+
+    @include mq("md") {
+        display: block;
+    }
+}
+
+.message__content {
+    width: 67.272727%;
+    background-color:  $black;
+    padding: rem(70) rem(30);
+
+    @include mq("md") {
+        width: 100%;
+        padding: rem(30) 0;
+
+    }
+}
+
+.message__body {
+    @include mq("md") {
+        padding: 0 rem(15);
+
+    }
+}
+
+.message__title {
+    padding: 0 rem(2);
+}
+
+.message__text,
+.message__ceo-name {
+    font-size: rem(16);
+    font-weight: $regular;
+
+    @include mq("md") {
+        font-size: rem(14);
+    }
+}
+
+.message__text {
+    margin-top: rem(60);
+    line-height: lh(38, 16);
+    font-family: $second-font-family;
+    text-transform: capitalize;
+
+    @include mq("md") {
+        line-height: lh(32, 14);
+        margin-top: rem(30);
+    }
+}
+
+.message__ceo-name {
+    margin-top: rem(30);
+    font-size: rem(20);
+    font-family: $second-font-family;
+
+    @include mq("md") {
+        margin-top: rem(30);
+    }
+}
+
+.message__ceo-name-eng {
+    font-size: rem(14);
+}
+
+.message__career {
+    margin-top: rem(20);
+    color: $black;
+    font-size: rem(14);
+    text-transform: uppercase;
+    font-family: $second-font-family;
+    @include mq("md") {
+        font-size: rem(13);
+    }
+}
+
+.message__career-letter {
+    text-transform: lowercase;
+}
+
+.message__career-initial {
+    text-transform: capitalize;
+}
+
+.message__img {
+    width: 32.7272%;
+    aspect-ratio: 360/535;
+    overflow: hidden;
+
+    @include mq("md") {
+        width: 100%;
+        aspect-ratio: 300/300;
+    }
+}
+
+.message__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

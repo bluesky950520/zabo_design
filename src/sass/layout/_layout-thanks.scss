@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.layout-thanks {
+    margin-top: rem(60);
+
+    @include mq("md") {
+        margin-top: rem(68);
+
+    }
+}

@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.sidebar-archive-list li {
+    border-bottom: rem(1) solid  $black;
+}
+
+.sidebar-archive-list li:last-of-type {
+    border-bottom: 0;
+}
+
+.sidebar-archive-list a {
+    display: inline-block;
+    width: 100%;
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: 1;
+    padding: rem(21) 0;
+    transition: 0.3s ease;
+}
+
+.sidebar-archive-list a:hover {
+    opacity: 0.7;
+}

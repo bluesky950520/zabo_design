@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.common-section-title {
+    font-family: $third-font-family;
+}
+
+.common-section-title__jp-title {
+    font-size: rem(23);
+    font-weight: $regular;
+    margin-top: rem(-30);
+    color:  $black;
+
+    @include mq("md") {
+        font-size: rem(15);
+        margin-top: rem(-18);
+    }
+}
+
+.common-section-title__eng-title {
+    font-size: rem(65);
+    font-weight: $light;
+    font-family: $second-font-family;
+    text-transform: capitalize;
+    color: rgba( $black, 0.3);
+
+    @include mq("md") {
+        font-size: rem(28);
+    }
+}
+
+.common-section-title__jp-title::after {
+    content: "";
+    display: inline-block;
+    width: rem(300);
+    height: rem(1);
+    margin-left: rem(10);
+    background-color:  $black;
+    vertical-align: super;
+
+    @include mq("md") {
+        width: rem(200);
+
+    }
+}

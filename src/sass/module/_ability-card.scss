@@ -1,0 +1,149 @@
+@use "global" as *;
+
+.ability-card {
+    background-color: $yellow2;
+    border-radius: rem(5);
+}
+
+.ability-card__block {
+    @include mq("md") {
+        display: flex;
+
+    }
+}
+
+.ability-card__pc-number {
+    @include mq("md") {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: rem(26);
+        font-weight: $black1;
+        line-height: 1;
+        color: $yellow2;
+        background-color: $blue1;
+        padding: rem(15);
+        border-top-left-radius: rem(5);
+        border-bottom-left-radius: rem(5);
+    }
+}
+
+.ability-card__inner {
+    padding: rem(22) rem(22) rem(20);
+
+    @include mq("md") {
+        padding: rem(25);
+
+    }
+}
+
+.ability-card__contents {
+    @include mq("md") {
+        display: grid;
+        grid-template-areas:
+            "image title"
+            "image text";
+        gap: 0 8%;
+    }
+}
+
+.ability-card__sp-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: rem(18);
+    font-weight: $black1;
+    line-height: 1;
+    color: $yellow2;
+    background-color: $blue1;
+    border-radius: 50%;
+    width: rem(40);
+    height: rem(40);
+    margin-right: rem(10);
+
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.ability-card__title {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    font-size: rem(20);
+    font-weight: $black1;
+    color: $black;
+    letter-spacing: 0.1em;
+
+    @include mq("md") {
+        margin-top: rem(13);
+        font-size: rem(25);
+        grid-area: title;
+    }
+}
+
+.ability-card__animation {
+    font-size: rem(30);
+    font-weight: $black1;
+    font-family: $second-font-family;
+    color: $blue1;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include mq("md") {
+        font-size: rem(40);
+
+    }
+}
+
+.ability-card__content {
+    margin-top: rem(8);
+
+    @include mq("md") {
+        margin-top: 0;
+        display: contents;
+    }
+}
+
+.ability-card__img {
+    aspect-ratio: 292/202;
+    overflow: hidden;
+    border-radius: rem(5);
+
+    @include mq("md") {
+        max-width: rem(227);
+        aspect-ratio: 227/227;
+        grid-area: image;
+    }
+}
+
+.ability-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.ability-card__body {
+    margin-top: rem(17);
+
+    @include mq("md") {
+        margin-top: rem(-3);
+        // display: contents;
+        width: 94%;
+        grid-area: text;
+    }
+}
+
+.ability-card__text {
+    font-size: rem(16);
+    font-weight: $semibold;
+    color: $black;
+
+    @include mq("md") {
+        letter-spacing: 0.1em;
+        line-height: 1.8;
+    }
+}

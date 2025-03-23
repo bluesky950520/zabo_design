@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.nicebase__inner {
+    margin-bottom: rem(80);
+    max-width: rem(600);
+    width: 100%;
+    padding-left: rem(20);
+    padding-right: rem(20);
+    // margin: 0 auto;
+
+    @include mq("md") {
+        margin-bottom: rem(96);
+        max-width: rem(1150);
+    }
+}
+
+.nicebase__title {
+    text-align: center;
+}
+
+.nicebase__cards {
+    margin-top: rem(30);
+
+    @include mq("md") {
+        display: flex;
+        justify-content: center;
+        gap: rem(20);
+    }
+}

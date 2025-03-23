@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.expert-cards__swiper.swiper {
+    overflow: initial;
+}
+
+.expert-cards__swiper .swiper-wrapper {
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2列 */
+        grid-template-rows: repeat(2, auto);
+        /* 2行 */
+        gap: rem(40);
+        /* カードの間隔 */
+        justify-content: center;
+        align-items: start;
+    }
+}
+
+.expert-cards__item.swiper-slide {
+    height: auto;
+    max-width: rem(262);
+    width: 100%;
+
+    @include mq("md") {
+        max-width: initial;
+        height: 100%;
+    }
+}
+
+.expert-cards__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* 各カードの高さを統一 */
+}

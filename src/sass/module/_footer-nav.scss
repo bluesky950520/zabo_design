@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.footer-nav__items {
+    display: flex;
+    justify-content: center; // 🔥 横方向の中央揃え
+    align-items: flex-start; // 🔥 縦方向の中央揃え（高さがある場合）
+    max-width: rem(335);
+    width: 100%;
+    margin: 0 auto; // 🔥 中央揃え
+
+    @include mq("md") {
+        justify-content: space-between; // 🔥 横方向の中央揃え
+
+    }
+}
+
+.footer-nav__item-wrap+.footer-nav__item-wrap {
+    margin-left: rem(34);
+
+    @include mq("md") {
+        margin-left: 0;
+    }
+}
+
+.footer-nav__sub-item+.footer-nav__sub-item {
+    margin-top: rem(6);
+
+    @include mq("md") {
+        margin-top: rem(3.5);
+
+    }
+}
+
+.footer-nav__sub-link {
+    display: inline-block;
+    color: $white;
+    font-size: rem(12);
+    font-weight: $black1;
+    font-family: $third-font-family;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: rem(5) 0;
+
+    @include mq("md") {
+        font-size: rem(18);
+        padding: rem(8) 0;
+
+    }
+}

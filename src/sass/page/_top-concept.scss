@@ -1,0 +1,89 @@
+@use "global" as *;
+
+.top-concept {
+    position: relative;
+}
+
+.top-concept::after {
+    content: "";
+    position: absolute;
+    bottom: -5.55555555vw;
+    right: 0;
+    left: 0;
+    background-image: url(../images/common/wave1-pc.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 5.55555555vw;
+    z-index: 1;
+
+    @include mq("md") {
+        background-image: url(../images/common/wave1-sp.svg);
+        bottom: -5.3333333vw;
+        height: 5.3333333vw;
+    }
+}
+
+.top-concept__wrap {
+    display: flex;
+    padding-bottom: rem(80);
+
+    @include mq("md") {
+        display: block;
+        padding-bottom: rem(15);
+    }
+}
+
+.top-concept__img {
+    aspect-ratio: 550/480;
+    overflow: hidden;
+
+    @include mq("md") {
+        aspect-ratio: 300/450;
+    }
+}
+
+.top-concept__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top-concept__content {
+    max-width: rem(490);
+    width: 100%;
+    margin-left: rem(60);
+    padding-top: rem(70);
+    padding-bottom: rem(103);
+
+    @include mq("md") {
+        max-width: initial;
+        margin-top: rem(30);
+        margin-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.top-concept__text {
+    font-size: rem(16);
+    font-weight: $regular;
+    font-family: $second-font-family;
+    color: $black;
+    line-height: calc(38/16);
+    margin-top: rem(40);
+    text-transform: capitalize;
+
+    @include mq("md") {
+        font-size: rem(14);
+        line-height: calc(32/14);
+        margin-top: rem(30);
+    }
+}
+
+.top-concept__btn {
+    text-align: right;
+    margin-top: rem(35);
+    padding-right: rem(16);
+}

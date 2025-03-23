@@ -1,0 +1,372 @@
+@use "global" as *;
+
+.mv {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: rem(600);
+}
+
+.mv__title-wrap {
+    position: fixed;
+    top: 39%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+    @include mq("md") {
+        top: 50%;
+        left: 50%;
+    }
+}
+
+
+.mv__title {
+    // opacity: 1; /* 初期表示 */
+    transition: opacity 0.5s ease;
+    /* フェードアニメーション */
+    // position: fixed;
+    // top: 56%;
+    // left: 14.23%;
+    // transform: translateY(-50%);
+    // z-index: 999;
+
+    // @include mq("md") {
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     z-index: 2;
+    // }
+}
+
+.mv__title-pc {
+
+    @include mq("md") {
+        display: flex;
+        /* span を縦に並べる */
+        flex-direction: column;
+        /* 縦並び */
+        gap: rem(22);
+        /* 行間の余白を設定 */
+    }
+}
+
+.mv__title-text {
+    display: inline-block;
+    width: fit-content;
+    font-size: rem(30);
+    font-weight: $black1;
+    color: $black;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    background-color: $white;
+    padding: rem(7) rem(10);
+    white-space: nowrap;
+
+    @include mq("md") {
+        font-size: rem(60);
+        padding: rem(6.5) rem(10);
+
+    }
+}
+
+.mv__title-sp {
+    display: flex;
+    flex-direction: column;
+    gap: rem(6);
+
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.mv__scroll-wrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+// .mv__title-pc .bg-wrap {
+//     position: relative;
+//     display: inline-block;
+//     margin-top: 5px;
+// }
+
+
+// .box {
+//     width: 100px;
+//     height: 100px;
+//     background-color: #000;
+// }
+
+// .fv,
+// .footer{
+//     background-color: #fff;
+//     width: 100%;
+//     height: 100vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     font-size: 32px;
+//     font-weight: bold;
+// }
+.mv__img {
+    display: flex;
+    /* 画像を横並びに */
+    width: 300vw;
+    /* 3枚の画像分の幅を確保 */
+    height: 100vh;
+
+}
+
+.mv-img {
+    width: 100vw;
+    height: 100%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+
+.mv-img img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+// .intro, .outro {
+//     height: 100vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     background: #f5f5f5;
+// }
+
+// /* 縦スクロールのエリア */
+// .scroll_container {
+//     height: 300vh; /* 横スクロール量に応じた高さ */
+//     position: relative;
+// }
+
+// /* 固定スクロール用 */
+// .sticky_wrap {
+//     overflow: hidden;
+//     position: sticky;
+//     top: 0;
+//     height: 100vh;
+//     display: flex;
+//     align-items: center;
+// }
+
+// /* 横スクロールコンテンツ */
+// .horizontal_scroll {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100vh;
+//     width: 300vw; /* 画面幅の3倍の長さ */
+//     display: flex;
+//     transition: transform 0.1s linear;
+//     overflow: hidden; /* スクロールバーを隠す */
+// }
+
+// /* 各スクロール要素 */
+// .scroll_contents {
+//     height: 100%;
+//     width: 100vw;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     font-size: 2rem;
+//     font-weight: bold;
+//     color: white;
+// }
+
+// /* 色付け */
+// .red { background-color: #ff3d00; }
+// .yellow { background-color: #ffff00; color: black; }
+// .green { background-color: #05ff00; color: black; }
+// .blue { background-color: #2835f8; }
+
+
+
+
+//   article:not(.sticky) {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     height: 100vh;
+//     background-color: whitesmoke;
+//   }
+//   article h2 {
+//     text-align: center;
+//   }
+//   .horizontal_scroll {
+//     --sticky-container-height: 100vh;
+//     height: var(--sticky-container-height);
+//     min-height: 100vh;
+//     box-sizing: border-box;
+//   }
+//   .horizontal_scroll .sticky {
+//     position: sticky;
+//     top: 0;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     min-height: 100vh;
+//   }
+//   .horizontal_scroll .scroller {
+//     display: flex;
+//     overflow: auto;
+//   }
+//   .horizontal_scroll .scroller.nobar {
+//     overflow: hidden;
+//   }
+//   .horizontal_scroll .scroller > * {
+//     flex-basis: 66%;
+//     flex-shrink: 0;
+//     aspect-ratio: 16 / 9;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: whitesmoke;
+//   }
+//   .horizontal_scroll .scroller > *:not(:first-child) {
+//     margin-left: 1%;
+//   }
+
+
+
+
+// .mv__title-main span {
+//     text-transform: capitalize;
+// }
+
+// .mv__title-sub {
+//     font-size: rem(18);
+//     font-family: $base-font-family;
+//     font-weight: $regular;
+//     letter-spacing: 0.12em;
+//     color: $black;
+//     line-height: 1;
+//     margin-top: rem(10);
+
+//     @include mq("md") {
+//         font-size: rem(14);
+//         letter-spacing: 0;
+//         text-align: center;
+//     }
+// }
+
+// .mv__swiper-wrap {
+//     position: relative;
+// }
+
+// .mv__swiper-wrap,
+// .mv__swiper,
+// .mv__swiper .swiper-img,
+// .mv__swiper .swiper-img img,
+// .mv__swiper .swiper-img picture {
+//     height: inherit;
+//     min-height: inherit;
+// }
+
+// .mv__swiper .swiper-img img {
+//     width: 100%;
+//     object-fit: cover;
+// }
+
+// .mv__swiper .swiper-button-next,
+// .mv__swiper .swiper-button-prev {
+//     width: rem(34);
+//     height: rem(34);
+//     background-color: rgba(203, 202, 202, 0.6);
+//     border-radius: rem(2);
+
+//     @include mq("md") {
+//         display: none;
+//     }
+// }
+
+// .mv__swiper .swiper-button-next {
+//     top: 50%;
+//     right: 5%;
+
+//     @include mq("md") {
+//         display: none;
+//     }
+// }
+
+// .mv__swiper .swiper-button-prev {
+//     top: 50%;
+//     left: 5%;
+
+//     @include mq("md") {
+//         display: none;
+//     }
+// }
+
+// .mv__swiper .swiper-button-next::before,
+// .mv__swiper .swiper-button-prev::before {
+//     content: "";
+//     position: absolute;
+//     width: rem(6.5);
+//     height: rem(6.5);
+//     border-top: solid rem(1.2) $black;
+//     border-right: solid rem(1.2) $black;
+
+//     @include mq("md") {
+//         display: none;
+//     }
+// }
+
+// .mv__swiper .swiper-button-next::before {
+//     transform: rotate(45deg);
+
+//     @include mq("md") {
+//         display: none;
+//     }
+// }
+
+// .mv__swiper .swiper-button-prev::before {
+//     transform: rotate(-135deg);
+
+//     @include mq("md") {
+//         display: none;
+//     }
+// }
+
+// .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+// .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+//     margin: 0 rem(11) 0;
+
+// }
+
+// .swiper-horizontal>.swiper-pagination-bullets,
+// .swiper-pagination-bullets.swiper-pagination-horizontal,
+// .swiper-pagination-custom,
+// .swiper-pagination-fraction {
+//     bottom: rem(35);
+
+//     @include mq("md") {
+//         bottom: rem(25);
+//     }
+// }
+
+// .mv__swiper .swiper-pagination-bullet {
+//     background-color: $black;
+//     width: rem(70);
+//     height: rem(4);
+//     border-radius: 0;
+//     opacity: 1;
+
+//     @include mq("md") {
+//         width: rem(40);
+//         height: rem(2);
+//     }
+// }
+
+// .mv__swiper .swiper-pagination-bullet-active {
+//     background-color: $black;
+// }
